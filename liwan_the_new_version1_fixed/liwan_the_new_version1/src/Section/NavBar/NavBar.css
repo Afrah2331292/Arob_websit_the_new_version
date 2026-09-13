@@ -1,0 +1,173 @@
+.NavBar_holder {
+    position: fixed;
+
+    width: 100%;
+    height: 4.45vw; /* 64px ÷ 1440 × 100 */
+
+    top: -2px;
+    left: 0;
+
+    z-index: 9999;
+
+    background: rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3.681vw; /* 53px ÷ 1440 × 100 */
+}
+
+.navbar a {
+    font-family: 'Cairo', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.281vw; /* 18.449px ÷ 1440 × 100 */
+    line-height: 120%;
+    text-align: center;
+
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -0.347vw; /* -5px ÷ 1440 × 100 */
+
+    width: 0;
+    height: 0.139vw; /* 2px ÷ 1440 × 100 */
+
+    background: currentColor;
+
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.liwan-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.347vw; /* 5px ÷ 1440 × 100 */
+    direction: rtl;
+}
+
+
+.NavBar_holder.scrolled {
+    background: #F8F2EB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.NavBar_holder.scrolled .navbar a {
+    color: #000000;
+}
+
+.NavBar_holder.scrolled .nav-link {
+    color: #000000;
+}
+
+.Arob_logo_container {
+    position: absolute;
+    width: 12vw;
+    height: auto;
+    right:5.5%
+
+}
+
+.Arob_logo_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.button{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    z-index: 9999;
+    padding: 0.694vw 1.111vw;
+
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    color: #FFFFFF;
+
+    white-space: nowrap;
+
+    background:
+            linear-gradient(
+                    69.19deg,
+                    rgba(47, 47, 47, 0.320965) 29.04%,
+                    rgba(102, 102, 102, 0) 35.74%
+            ),
+            linear-gradient(
+                    69.19deg,
+                    rgba(47, 47, 47, 0.320965) 29.04%,
+                    rgba(102, 102, 102, 0) 35.74%
+            );
+
+    box-shadow:
+            0 0.5rem 2rem rgba(0, 0, 0, 0.3),
+            inset 0 0.0625rem 0 rgba(255, 255, 255, 0.2);
+
+    backdrop-filter: blur(0.625rem);
+    -webkit-backdrop-filter: blur(0.625rem);
+
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease,
+            background 0.3s ease,
+            backdrop-filter 0.3s ease,
+            border-color 0.3s ease;
+}
+
+
+/* Hover */
+.button:hover {
+    background: rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(1.111vw);
+    -webkit-backdrop-filter: blur(1.111vw);
+
+    border-color: rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+            0 0.7rem 2.5rem rgba(0, 0, 0, 0.35),
+            inset 0 0 0.833vw rgba(255, 255, 255, 0.15);
+
+    transform: scale(1.03);
+}
+
+.NavBar_holder.scrolled .button {
+    background: #F8F2EB;
+    color: #1D1D1B;
+    box-shadow:none;
+    border: 0.5px solid #1D1D1B;
+}
+

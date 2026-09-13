@@ -1,0 +1,67 @@
+.form_input {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 0.556vw; /* 8px */
+}
+
+
+.conact_title {
+    margin: 0;
+
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.142vw; /* 16.444px */
+    line-height: 160%;
+
+    text-align: right;
+
+    color: #000000;
+}
+
+
+.required-star {
+    color: red;
+
+    margin-left: 0.417vw; /* 6px */
+
+    font-weight: bold;
+}
+
+
+.input_name {
+    width: 100%;
+    height: 4.167vw; /* 60px */
+
+    box-sizing: border-box;
+
+    background: #F8F2EB;
+
+    border: 0.072vw solid rgba(87, 72, 50, 0.7); /* 1.03821px */
+
+    border-radius: 0.721vw; /* 10.3821px */
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+
+    font-size: 1.111vw; /* 16px */
+    line-height: 160%;
+
+    text-align: right;
+
+    padding-right: 1.389vw; /* 20px */
+
+    color: #B4B4B4;
+
+    outline: none;
+}
+
+
+.input_name::placeholder {
+    color: #B4B4B4;
+}

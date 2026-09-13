@@ -1,0 +1,1189 @@
+/*
+   Mobile-only responsive layer.
+   Every existing desktop rule remains untouched; these overrides apply only
+   to phone-sized screens.
+*/
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+@media (max-width: 57rem) {
+    html {
+        font-size: 16px;
+        overflow-x: hidden;
+    }
+
+    body,
+    #root,
+    .App {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    #home,
+    #discoverLiwan,
+    #services,
+    #about,
+    #advantages,
+    #contact {
+        scroll-margin-top: 5rem;
+    }
+
+    /* Navigation */
+    .NavBar_holder {
+        top: 0;
+        width: 100%;
+        height: 4.5rem;
+        padding: 0 1rem;
+        background: rgba(18, 18, 17, 0.58);
+        backdrop-filter: blur(0.8rem);
+        -webkit-backdrop-filter: blur(0.8rem);
+    }
+
+    .NavBar_holder.scrolled {
+        background: rgba(248, 242, 235, 0.97);
+    }
+
+    .Arob_logo_container {
+        right: 50%;
+        width: 7.25rem;
+        height: auto;
+        transform: translateX(50%);
+    }
+
+    .Arob_logo_container img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .NavBar_holder .button {
+        top: 50%;
+        left: 1rem;
+        min-width: 4.5rem;
+        min-height: 2.5rem;
+        padding: 0.5rem 0.65rem;
+        border-width: 1px;
+        border-radius: 0.7rem;
+        font-size: 0.75rem;
+        transform: translateY(-50%);
+        box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.24);
+    }
+
+    .NavBar_holder .button:hover {
+        transform: translateY(-50%);
+    }
+
+    .mobile-menu-toggle {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        z-index: 10001;
+        width: 2.75rem;
+        height: 2.75rem;
+        padding: 0;
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        border-radius: 0.7rem;
+        background: rgba(0, 0, 0, 0.16);
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+        cursor: pointer;
+    }
+
+    .NavBar_holder.scrolled .mobile-menu-toggle {
+        border-color: rgba(29, 29, 27, 0.28);
+        background: rgba(87, 72, 50, 0.06);
+    }
+
+    .mobile-menu-toggle span {
+        width: 1.25rem;
+        height: 2px;
+        border-radius: 999px;
+        background: #ffffff;
+        transition: transform 0.25s ease, opacity 0.2s ease, background 0.25s ease;
+    }
+
+    .NavBar_holder.scrolled .mobile-menu-toggle span {
+        background: #1d1d1b;
+    }
+
+    .mobile-menu-toggle.is-open span:nth-child(1) {
+        transform: translateY(0.45rem) rotate(45deg);
+    }
+
+    .mobile-menu-toggle.is-open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.is-open span:nth-child(3) {
+        transform: translateY(-0.45rem) rotate(-45deg);
+    }
+
+    .NavBar_holder .navbar {
+        position: absolute;
+        top: calc(100% + 0.65rem);
+        right: 0.75rem;
+        left: 0.75rem;
+        width: auto;
+        max-height: 0;
+        padding: 0;
+        border: 1px solid rgba(87, 72, 50, 0.16);
+        border-radius: 1rem;
+        background: rgba(248, 242, 235, 0.98);
+        box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(1rem);
+        -webkit-backdrop-filter: blur(1rem);
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-0.75rem);
+        transition: max-height 0.35s ease, padding 0.35s ease,
+            opacity 0.25s ease, visibility 0.25s ease, transform 0.35s ease;
+    }
+
+    .NavBar_holder .navbar.mobile-open {
+        max-height: calc(100svh - 5.75rem);
+        padding: 0.7rem;
+        overflow-y: auto;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .NavBar_holder .navbar > a,
+    .NavBar_holder .dropdown-title {
+        width: 100%;
+        min-height: 2.75rem;
+        padding: 0.7rem 0.85rem;
+        border-radius: 0.65rem;
+        color: #1d1d1b;
+        font-size: 0.96rem;
+        line-height: 1.4;
+        text-align: right;
+    }
+
+    .NavBar_holder .navbar > a:hover,
+    .NavBar_holder .dropdown-title:hover {
+        background: rgba(87, 72, 50, 0.08);
+    }
+
+    .NavBar_holder .nav-link::after {
+        display: none;
+    }
+
+    .NavBar_holder .dropdown {
+        width: 100%;
+    }
+
+    .NavBar_holder .dropdown-title {
+        justify-content: flex-end;
+        background: rgba(178, 114, 69, 0.08);
+    }
+
+    .NavBar_holder .arrow {
+        font-size: 0.95rem;
+    }
+
+    .NavBar_holder .dropdown .dropdown-menu {
+        position: static;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
+
+        max-height: 0;
+        margin-top: 0;
+        padding: 0;
+
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: translateY(-0.4rem);
+
+        transition:
+                max-height 0.35s ease,
+                margin-top 0.35s ease,
+                opacity 0.25s ease,
+                transform 0.35s ease;
+    }
+
+    .NavBar_holder .dropdown.is-open .dropdown-menu {
+        max-height: 22rem;
+        margin-top: 0.35rem;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+
+    .NavBar_holder .dropdown-menu a {
+        min-width: 0;
+        padding: 0.55rem 0.45rem;
+        border-radius: 0.5rem;
+        background: rgba(255, 255, 255, 0.68);
+        color: #1d1d1b;
+        font-size: 0.76rem;
+        line-height: 1.5;
+        text-align: right;
+        white-space: normal;
+
+    }
+
+    /* Hero */
+    .Hero {
+        height: 100svh;
+        min-height: 42rem;
+        max-height: 58rem;
+    }
+
+    .hero_photo {
+        object-position: center;
+    }
+
+    .corner_pattern {
+        width: min(58vw, 15rem);
+        opacity: 0.86;
+    }
+
+    .Hero_main_section {
+        top: 51%;
+        right: 1.25rem;
+        left: 1.25rem;
+        width: auto;
+        gap: 2rem;
+        align-items: center;
+        transform: translateY(-43%);
+    }
+
+    .hero_content {
+        width: 100%;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    .liwan_logo {
+        width: min(48vw, 12rem);
+    }
+
+    .hero_description {
+        width: min(100%, 23rem);
+        font-size: clamp(1.05rem, 4.7vw, 1.25rem);
+        line-height: 1.8;
+        text-align: center;
+    }
+
+    .button_section {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.9rem;
+    }
+
+    .conection_button,
+    .service_button {
+        width: min(100%, 20rem) !important;
+        height: 3.15rem !important;
+        border-radius: 0.85rem !important;
+        font-size: 0.95rem;
+    }
+
+    /* Discover Liwan */
+    .hero {
+        height: auto;
+        min-height: 44rem;
+        padding: 4.5rem 0 5.5rem;
+        overflow: hidden;
+    }
+
+    .liwan_cardsAndDescription_container {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        gap: 2.25rem;
+        transform: none;
+
+    }
+
+    .discover-liwan {
+        width: auto;
+        max-width: calc(100% - 2rem);
+        font-size: clamp(1.9rem, 8vw, 2.35rem);
+        line-height: 1.25;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .card-container {
+        --card-width: min(72vw, 17rem);
+
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+
+        padding-block: 1.1rem;
+        padding-inline: calc((100% - var(--card-width)) / 2);
+
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: calc((100% - var(--card-width)) / 2);
+
+        scrollbar-width: none;
+    }
+
+    .card-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card-image {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: min(72vw, 17rem);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        flex: 0 0 min(72vw, 17rem);
+        border-radius: 1.3rem;
+        scroll-snap-align: center;
+        transform: none !important;
+
+    }
+
+    .description {
+        width: min(calc(100% - 2.5rem), 29rem);
+        font-size: 1.08rem;
+        line-height: 1.8;
+    }
+
+    .Pattern {
+        right: -4rem;
+        top: auto;
+        bottom: 1rem;
+        width: 22rem;
+        height: auto;
+        opacity: 0.7;
+    }
+
+    .card-overlay {
+        top: 24% !important;
+        left: 10% !important;
+        width: 80% !important;
+        height: 48% !important;
+        filter: blur(3rem);
+    }
+
+    /* Services */
+    .Services {
+        height: auto;
+        min-height: 0;
+    }
+
+    .services-sticky {
+        position: relative;
+        top: auto;
+        height: auto;
+        min-height: 100vh;
+        padding: 4.75rem 1rem 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .services-sticky::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: rgba(10, 9, 8, 0.2);
+        pointer-events: none;
+    }
+    .ServicesImage {
+        position: absolute;
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+
+        display: block;
+    }
+
+    .LiwanPattern {
+        width: 4rem;
+        left: 0.75rem;
+        top: 0;
+        z-index: 3;
+    }
+
+    .service-title-container,
+    .service-title-container.english-layout {
+        position: relative;
+        top: auto;
+        left: auto;
+        z-index: 2;
+        width: 100%;
+        gap: 1.2rem;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .service-title {
+        top: auto;
+        width: min(65vw, 16rem);
+    }
+
+    .services-english-title {
+        width: auto;
+        max-width: 100%;
+        font-size: 2.25rem;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .service-description {
+        width: min(100%, 22rem);
+        font-size: 1.25rem;
+        line-height: 1.7;
+    }
+
+    .service-title-container .service-button {
+        width: min(100%, 18rem) !important;
+        height: 3.25rem !important;
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .service-title-container .arrow_white {
+        left: 1.4rem !important;
+        font-size: 1.2rem !important;
+    }
+
+    .services-list-container {
+        position: relative;
+        top: auto;
+        left: auto;
+        z-index: 2;
+        width: 100%;
+        margin-top: 3rem;
+        gap: 1.25rem;
+        align-items: stretch;
+        transform: none !important;
+    }
+
+    .first-list,
+    .second-list,
+    .third-list {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 1.25rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 1rem;
+        background: rgba(0, 0, 0, 0.76);
+        backdrop-filter: blur(0.45rem);
+        -webkit-backdrop-filter: blur(0.45rem);
+    }
+
+    .first-list {
+        min-height: 13rem;
+        display: grid;
+        grid-template-columns: 3.75rem minmax(0, 1fr);
+        grid-template-areas:
+            "icon title"
+            "details details";
+        align-items: center;
+        gap: 1rem;
+        direction: rtl;
+    }
+
+    .icon_holder_first_list {
+        position: relative;
+        top: auto;
+        right: auto;
+        grid-area: icon;
+        width: 3.75rem;
+        height: 3.75rem;
+        border-radius: 0.75rem;
+    }
+
+    .work_space_icon {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    .first-list-title,
+    .second-list-title,
+    .third-list-title {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: auto;
+        height: auto;
+        font-size: 1.25rem;
+        line-height: 1.6;
+        text-align: right;
+        white-space: normal;
+    }
+
+    .first-list-title {
+        grid-area: title;
+    }
+
+    .first-list-description {
+        position: relative;
+        top: auto;
+        right: auto;
+        grid-area: details;
+        width: auto;
+        height: auto;
+        padding-right: 1.25rem;
+        font-size: 1rem;
+        line-height: 2;
+        white-space: normal;
+    }
+
+    .second-list-title,
+    .third-list-title {
+        margin-bottom: 1.25rem;
+    }
+
+    .serviceholders-grid-second-list,
+    .serviceholders-grid-third-list {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .serviceholder {
+        width: 100%;
+        height: 4rem;
+        border-radius: 0.65rem;
+    }
+
+    .serviceholder:hover {
+        transform: none;
+    }
+
+    .service-icon {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 0 0.65rem 0.65rem 0;
+    }
+
+    .service-icon-img {
+        width: 1.9rem;
+        height: 1.9rem;
+    }
+
+    .Service-description {
+        top: 50%;
+        right: 4.75rem;
+        left: 0.75rem;
+        width: auto;
+        font-size: 0.9rem;
+        line-height: 1.45;
+        white-space: normal;
+    }
+
+    /* Advantages and contact */
+    .AdvantagesAndCommunicationSection {
+        height: auto;
+        min-height: 0;
+        padding: 4.5rem 1rem 0;
+    }
+
+    .advantages-title {
+        order: 1;
+        margin: 0;
+        font-size: clamp(2rem, 8vw, 2.4rem);
+        line-height: 1.35;
+    }
+
+    .advantages-container {
+        order: 2;
+        width: 100%;
+        margin-top: 2.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem;
+    }
+
+    .advantge {
+        width: 100% !important;
+        height: 10.75rem !important;
+        border-radius: 0.75rem;
+        box-shadow: 0 0.15rem 0.7rem rgba(0, 0, 0, 0.12);
+    }
+
+    .advantge:hover {
+        box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.14);
+    }
+
+    .advantge-icon {
+        top: 1.25rem;
+        left: 50%;
+        right: auto;
+        width: 2.4rem;
+        height: 2.4rem;
+        transform: translateX(-50%);
+        object-fit: contain;
+    }
+
+    .advantge-title {
+        top: 4.25rem;
+        right: 0.6rem;
+        left: 0.6rem;
+        width: auto;
+        min-height: 2.5rem;
+        font-size: 0.92rem;
+        line-height: 1.45;
+    }
+
+    .advantage-line {
+        bottom: auto;
+        top: 7rem;
+        width: 1.9rem;
+        border-width: 1px;
+    }
+
+    .advantge:hover .advantage-line {
+        width: 4rem;
+    }
+
+    .advantge-description {
+        top: 7.65rem;
+        right: 0.7rem;
+        left: 0.7rem;
+        width: auto;
+        font-size: 0.75rem;
+        line-height: 1.45;
+    }
+
+    .advantagespattern {
+        right: 0.75rem;
+        width: 4rem;
+    }
+
+    .Liwan_title_logo_container {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        order: 3;
+        width: 100%;
+        margin: 4.75rem 0 2rem;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .Liwan_contact_title {
+        width: 100%;
+        min-height: 0;
+        font-size: clamp(2rem, 8vw, 2.35rem);
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .Liwan_contact_logo {
+        width: min(68vw, 17rem);
+        height: auto;
+    }
+
+    .contact_section_holder {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        order: 4;
+        width: 100%;
+    }
+
+    .formpaper {
+        width: 100%;
+        max-width: 36rem;
+        height: auto;
+        margin: 0 auto 4rem;
+        padding: 1.5rem 1rem 2rem;
+        border-radius: 1rem;
+        overflow: visible;
+        box-shadow: 0 0.8rem 2.25rem rgba(87, 72, 50, 0.12);
+    }
+
+    .input_container {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        gap: 1.5rem;
+        transform: none;
+    }
+
+    .form_input {
+        gap: 0.5rem;
+    }
+
+    .conact_title {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .required-star {
+        margin-left: 0.35rem;
+    }
+
+    .input_name {
+        height: 3.5rem;
+        padding: 0 1rem;
+        border-width: 1px;
+        border-radius: 0.65rem;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .file_input {
+        height: 10rem;
+        border-width: 2px;
+        border-radius: 0.65rem;
+    }
+
+    .file_description {
+        top: 1.15rem;
+        width: calc(100% - 2rem);
+        height: auto;
+        font-size: 0.92rem;
+        white-space: normal;
+    }
+
+    .file_button {
+        top: 4.25rem;
+        width: 8rem;
+        height: 2.65rem;
+        border-radius: 0.4rem;
+        font-size: 0.85rem;
+    }
+
+    .file_type_container {
+        bottom: 0.65rem;
+        width: calc(100% - 1rem);
+        gap: 0.7rem;
+        white-space: normal;
+    }
+
+    .filetype,
+    .filesize {
+        font-size: 0.68rem;
+        white-space: normal;
+    }
+
+    .file-error,
+    .input_error {
+        font-size: 0.75rem;
+        line-height: 1.5;
+        white-space: normal;
+    }
+
+    .file-error {
+        position: relative;
+        top: auto;
+        right: auto;
+        left: auto;
+        margin-top: 0.25rem;
+    }
+
+    .Submit_button {
+        width: 100%;
+        height: 3.5rem;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .Footer_container {
+        height: auto;
+        min-height: 0;
+        padding: 3.5rem 1rem 1.5rem;
+    }
+
+    .Upper_section {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 3rem;
+    }
+
+    .first_section_separator_line,
+    .second_section_separator_line,
+    .footer_line {
+        display: none;
+    }
+
+    .Arob_section {
+        position: relative;
+        top: auto;
+        order: 1;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        gap: 1.5rem;
+    }
+
+    .Aroblogo_line_container {
+        gap: 1rem;
+    }
+
+    .Arob_logo_White {
+        width: 11rem;
+        height: auto;
+    }
+
+    .contact_us_line,
+    .follow_us_line,
+    .Arob_line {
+        width: 2.5rem;
+        border-top-width: 2px;
+    }
+
+    .Aroblogo_line_container:hover .Arob_line {
+        width: 6rem;
+    }
+
+    .Arob_buttom_description {
+        width: min(100%, 28rem);
+        height: auto;
+        min-height: 0;
+        font-size: 1rem;
+        line-height: 1.9;
+    }
+
+    .contact_section {
+        position: relative;
+        order: 2;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.25rem;
+    }
+
+    .contact_us,
+    .follow_us {
+        position: relative;
+        top: auto;
+        right: auto;
+        align-items: center;
+        gap: 0.45rem;
+    }
+
+    .contact_us_title,
+    .folllow_us_title {
+        width: auto;
+        height: auto;
+        font-size: 1.4rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .phone_email_container {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        gap: 0.8rem;
+    }
+
+    .contact_us_mail_holder,
+    .contact_us_phone_holder {
+        width: 100%;
+        height: 4rem;
+        border-width: 1px;
+        border-radius: 0.85rem;
+        box-shadow: inset 0 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
+    }
+
+    .mail_icon_holder,
+    .phone_icon_holder {
+        width: 4rem;
+        height: 4rem;
+        border-width: 1px;
+        border-radius: 0.85rem;
+        backdrop-filter: blur(0.25rem);
+    }
+
+    .mail_icon,
+    .phone_icon {
+        width: 1.65rem;
+        height: 1.65rem;
+    }
+
+    .mail-text,
+    .phone-text {
+        right: 4.75rem;
+        left: 0.75rem;
+        font-size: 0.92rem;
+        line-height: 1.5;
+        text-align: right;
+    }
+
+    .first_section_to_right_line {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        margin: 0.25rem 0;
+        border-width: 1px 0 0;
+        transform: none;
+    }
+
+    .social_Media {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        justify-content: center;
+        gap: 0.7rem;
+        flex-wrap: wrap;
+    }
+
+    .linkedIn_icon_holder,
+    .X_icon_holder,
+    .Whatsapp_icon_holder,
+    .Instagram_icon_holder,
+    .youTube_icon_holder {
+        width: 3.1rem;
+        height: 3.1rem;
+        border-width: 1px;
+        border-radius: 0.65rem;
+    }
+
+    .LinkedIn_icon,
+    .X_icon,
+    .Whatsapp_icon,
+    .Instagram_icon,
+    .youtube_icon {
+        width: 1.65rem;
+        height: 1.65rem;
+    }
+
+    .location_section {
+        position: relative;
+        order: 3;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .map_wrapper {
+        position: relative;
+        width: 100%;
+        height: 15rem;
+        margin: 0;
+    }
+
+    .map-container {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-width: 1px;
+        border-radius: 1rem;
+        transform: none;
+    }
+
+    .map-container:hover {
+        transform: none;
+    }
+
+    .company-marker {
+        gap: 0.25rem;
+    }
+
+    .company-name {
+        margin-bottom: 0.2rem;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .company-location-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .map-view-control {
+        margin: 0 0.6rem 0.6rem 0;
+    }
+
+    .map-view-box {
+        width: 5.75rem;
+        height: 2.3rem;
+        border-radius: 0.45rem;
+        font-size: 0.72rem;
+        box-shadow: 0 0.15rem 0.6rem rgba(0, 0, 0, 0.25);
+    }
+
+    .location_title_container {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+        direction: rtl;
+        transform: none;
+    }
+
+    .location_icon_holder {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 3rem;
+        height: 3rem;
+        flex: 0 0 3rem;
+    }
+
+    .location_icon_buttom {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    .location_title_description {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: auto;
+        max-width: calc(100% - 3.8rem);
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .location_title,
+    .location_description {
+        width: 100%;
+        height: auto;
+        justify-content: flex-start;
+        text-align: right;
+        white-space: normal;
+    }
+
+    .location_title {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .location_description {
+        font-size: 0.72rem;
+        line-height: 1.6;
+    }
+
+    .Lower_section {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        width: 100%;
+        height: auto;
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(178, 114, 69, 0.3);
+        transform: none;
+    }
+
+    .copy_right_sentence,
+    .copyright {
+        width: 100%;
+        height: auto;
+        padding: 0.35rem 0;
+        font-size: 0.78rem;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 23rem) {
+    .NavBar_holder {
+        padding: 0 0.7rem;
+    }
+
+    .Arob_logo_container {
+        width: 6.2rem;
+    }
+
+    .NavBar_holder .button {
+        left: 0.7rem;
+        min-width: 4rem;
+        padding-inline: 0.45rem;
+        font-size: 0.68rem;
+    }
+
+    .mobile-menu-toggle {
+        right: 0.7rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .advantages-container {
+        grid-template-columns: 1fr;
+    }
+
+    .advantge {
+        min-height: 10.5rem;
+    }
+
+    .file_type_container {
+        flex-direction: column;
+        gap: 0.1rem;
+    }
+}
+
+@media (max-width: 48rem) and (max-height: 36rem) and (orientation: landscape) {
+    .Hero {
+        min-height: 36rem;
+        max-height: none;
+    }
+}
+
+@media (max-width: 48rem) and (prefers-reduced-motion: reduce) {
+    .NavBar_holder .navbar,
+    .mobile-menu-toggle span {
+        transition: none;
+    }
+}

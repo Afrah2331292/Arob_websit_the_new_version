@@ -1,0 +1,121 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "liwan": "Liwan",
+    "discoverLiwan": "Discover Liwan",
+    "servicesLiwan": "Liwan Services",
+    "advantagesLiwan": "Liwan Advantages",
+    "contact": "Contact Us",
+    "blog": "Blog"
+  },
+  "hero": {
+    "description": "We combine elegant design with integrated services to provide flexible workspaces that support your business at every stage",
+    "contactButton": "Contact Us",
+    "servicesButton": "Explore Our Services"
+  },
+  "cards": {
+    "title": "Discover Liwan",
+    "description": "From private offices to shared workspaces, every corner of Liwan reflects quality and professionalism"
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "Integrated services to support your business",
+    "contactButton": "Contact Us",
+    "list1": {
+      "title": "Work Spaces",
+      "items": [
+        "Meeting Rooms",
+        "Work & Event Rooms"
+      ]
+    },
+    "list2": {
+      "title": "Business Services",
+      "items": [
+        "Secretarial & Client Reception",
+        "Internal Phone Line",
+        "Printing & Office Supplies",
+        "Networking & Client Base Access",
+        "On-Screen Business Marketing",
+        "Business Deals Between Entrepreneurs"
+      ]
+    },
+    "list3": {
+      "title": "Facilities & Amenities",
+      "items": [
+        "High-Speed Wired & Wireless Internet",
+        "Smart Entry Access",
+        "Hospitality & Beverages"
+      ]
+    }
+  },
+  "advantages": {
+    "title": "Liwan Advantages",
+    "items": [
+      {
+        "title": "Panoramic Offices",
+        "description": "Wide views that inspire productivity"
+      },
+      {
+        "title": "Strategic Location",
+        "description": "In the heart of Makkah"
+      },
+      {
+        "title": "24/7 Access",
+        "description": "A workspace available around the clock"
+      },
+      {
+        "title": "Private Parking",
+        "description": "Dedicated parking for your comfort"
+      },
+      {
+        "title": "Inspiring Design",
+        "description": "A work environment that fosters focus and innovation"
+      },
+      {
+        "title": "Special Facilities",
+        "description": "For people of determination and easy access"
+      }
+    ],
+    "joinTitle": "Join the Community"
+  },
+  "contact": {
+    "nameLabel": "Name",
+    "namePlaceholder": "Enter your full name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "example@gmail.com",
+    "emailError": "Please enter a valid email address",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "05X XXX XXXX",
+    "phoneError": "Phone number must start with 05 and contain 10 digits",
+    "fileLabel": "Attach a file (optional)",
+    "fileDragText": "Drag your file here or choose it",
+    "fileChooseButton": "Choose File",
+    "fileUploadedButton": "✓ File Attached",
+    "fileTypeText": "PDF, DOCX, JPG, PNG",
+    "fileSizeText": "Max size: 10MB",
+    "fileTypeError": "File type not allowed. Choose PDF, DOC, DOCX, JPG or PNG",
+    "fileSizeError": "File size must not exceed 10MB",
+    "requiredFieldsError": "Please fill in all required fields",
+    "validationError": "Please correct the errors before submitting",
+    "successMessage": "Your request has been sent successfully!",
+    "submitErrorMessage": "An error occurred while submitting, please try again",
+    "networkErrorMessage": "Could not connect to the server, check your internet connection",
+    "submitButton": "Join Now",
+    "submittingButton": "Submitting..."
+  },
+  "footer": {
+    "contactTitle": "Contact Us",
+    "followTitle": "Follow Us",
+    "companyDescription": "We provide innovative business and investment solutions with a professional vision and a promising future.",
+    "locationTitle": "Saudi Arabia - Makkah",
+    "locationDescription": "Third Ring Road, Al Khalidiyah, Makkah 24232",
+    "copyright": "© 2026 All rights reserved to Arob for Business and Investment",
+    "developedBy": "Developed by Afrah"
+  },
+  "map": {
+    "viewMap": "View Map"
+  }
+}
+

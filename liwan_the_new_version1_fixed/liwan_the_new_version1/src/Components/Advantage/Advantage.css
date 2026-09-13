@@ -1,0 +1,105 @@
+.advantge {
+    position: relative;
+
+    background: #FFFFFF;
+    box-shadow: 0vw 0vw 0.226vw rgba(0, 0, 0, 0.25); /* 3.26119px */
+    border-radius: 0.694vw; /* 10px */
+    z-index: 10;
+
+    transition: background-color 0.3s ease;
+}
+
+.advantge:hover {
+    background: #F7EDE1;
+    box-shadow: 0vw 0.278vw 0.278vw rgba(0, 0, 0, 0.25); /* 4px, 4px */
+}
+
+.advantge-title {
+    position: absolute;
+
+    left: 21.05%;
+    right: 19.77%;
+    top: 34.03%;
+
+    margin: 0;
+
+    font-family: 'Cairo';
+    font-weight: 900;
+    font-size: 1.046vw; /* 15.0564px */
+    line-height: 1.944vw; /* 28px */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: #574832;
+
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.advantge-description {
+    position: absolute;
+
+    left: 23.68%;
+    right: 24.94%;
+    top: 69%;
+    width: 10.417vw; /* 150px */
+    margin: 0;
+
+    font-family: 'Cairo';
+    font-weight: 400;
+    font-size: 0.697vw; /* 10.0376px */
+    line-height: 1.319vw; /* 19px */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+.advantge-icon {
+    position: absolute;
+    height: 2.778vw; /* 40px */
+    left: 42.48%;
+    right: 42.48%;
+    top: calc(50% - 1.875vw - 2.5vw); /* 54px/2, 36px */
+    z-index: 9;
+
+    transition: opacity 0.3s ease;
+}
+
+/* تبديل الصورة عند الهوفر */
+.advantge-icon-default {
+    opacity: 1;
+}
+
+.advantge-icon-hover {
+    opacity: 0;
+}
+
+.advantge:hover .advantge-icon-default {
+    opacity: 0;
+}
+
+.advantge:hover .advantge-icon-hover {
+    opacity: 1;
+}
+
+/* الخط البرتقالي */
+.advantage-line {
+    width: 1.875vw; /* 27px */
+    border: 0.070vw solid #B27245; /* 1.00376px */
+    position: absolute;
+    left: 50%;
+    bottom: 41%;
+    transform: translateX(-50%);
+
+    transition: width 0.3s ease;
+}
+
+.advantge:hover .advantage-line {
+    width: 5.208vw; /* 75px */
+}

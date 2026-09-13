@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Hero {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero_photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+    display: block;
+}
+
+.corner_pattern {
+    position: absolute;
+
+    /* 1536px = 20.625rem~29.25vw، الحد الأدنى يحمي الموبايل، الأقصى يمنع التضخم بشاشات ضخمة جدًا */
+    width: clamp(20.625rem, 29.25vw, 40rem);
+
+    left: 0;
+    bottom: 0.0625rem;
+
+    z-index: 2;
+}
+
+
+/* Main Container
+    Logo + Description + Buttons
+*/
+.Hero_main_section {
+    position: absolute;
+    z-index: 3;
+
+    right: 7%;
+    top: 18%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    /* 50px عند 1536px */
+    gap: clamp(1.5rem, 3.26vw, 4rem);
+
+}
+
+
+/* Logo + Description */
+.hero_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    /* 27px عند 1536px */
+    gap: clamp(1rem, 1.76vw, 2.2rem);
+
+}
+
+.liwan_logo {
+    /* 300px عند 1536px */
+    width: clamp(10.625rem, 19.53vw, 24rem);
+    height: auto;
+    aspect-ratio: 271 / 157;
+}
+
+
+/* Description */
+.hero_description {
+    margin: 0;
+
+    /* 489px عند 1536px */
+    width: clamp(20rem, 31.84vw, 38rem);
+
+    /* 30px عند 1536px */
+    font-size: clamp(1rem, 1.95vw, 2.4rem);
+    font-family: 'GE Snd Book', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+
+    text-align: right;
+
+    color: #FFFFFF;
+    opacity: 0.9;
+
+    text-shadow: 0px 0.125rem 0.1875rem rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 18.75rem) and (max-width: 43.75rem) {
+    .hero_description {
+        width: 90vw;
+        font-size: 5vw;
+    }
+}
+
+
+/* Buttons */
+.button_section {
+    display: flex;
+    justify-content: flex-end;
+
+    /* 50px عند 1536px */
+    gap: clamp(1.5rem, 3.26vw, 4rem);
+
+}
+
+
+/* Mobile */
+@media (max-width: 43.75rem) {
+
+    .Hero_main_section {
+        right: 7%;
+        top: 18%;
+
+        gap: 2.5rem;
+    }
+
+    .button_section {
+        flex-direction: column;
+        gap: 1.5625rem;
+    }
+}
+
+
+
+
+.conection_button {
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 700;
+    /* 17px عند 1536px */
+    font-size: clamp(0.75rem, 1.11vw, 1.3rem);
+    line-height: 120%;
+
+    color: #FFFFFF;
+
+    white-space: nowrap;
+
+    background:
+            linear-gradient(
+                    69.19deg,
+                    rgba(47, 47, 47, 0.320965) 29.04%,
+                    rgba(102, 102, 102, 0) 35.74%
+            ),
+            linear-gradient(
+                    69.19deg,
+                    rgba(47, 47, 47, 0.320965) 29.04%,
+                    rgba(102, 102, 102, 0) 35.74%
+            );
+
+    box-shadow:
+            0 0.5rem 2rem rgba(0, 0, 0, 0.3),
+            inset 0 0.0625rem 0 rgba(255, 255, 255, 0.2);
+
+    backdrop-filter: blur(0.625rem);
+    -webkit-backdrop-filter: blur(0.625rem);
+
+    border: none;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+}
+
+
+.conection_button:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+            0 0.7rem 2.2rem rgba(0, 0, 0, 0.35),
+            inset 0 0.0625rem 0 rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+
+
+
+.service_button {
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 700;
+    /* 17px عند 1536px */
+    font-size: clamp(0.75rem, 1.11vw, 1.3rem);
+    line-height: 120%;
+
+    color: #FFFFFF;
+
+    white-space: nowrap;
+
+    background:
+            linear-gradient(
+                    180deg,
+                    rgba(87, 72, 50, 0.9) 0%,
+                    rgba(182, 150, 104, 0.9) 60.58%
+            );
+
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
+    border-radius: 0.9375rem;
+    border: none;
+
+    /* الحركة */
+    transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease,
+            background 0.3s ease;
+
+    cursor: pointer;
+}
+
+.service_button:hover {
+    transform: scale(1.01);
+
+    background:
+            linear-gradient(
+                    180deg,
+                    rgba(87, 72, 50, 0.9) 0%,
+                    rgba(134, 111, 77, 0.9) 60.1%,
+                    rgba(182, 150, 104, 0.9) 100%
+            );
+
+    box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.45);
+}
+
+
+.connection_arrow {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+
+    transform: translateX(10px);
+
+    transition:
+            opacity 0.3s ease,
+            transform 0.3s ease,
+            width 0.3s ease;
+}
+
+.conection_button:hover .connection_arrow {
+    opacity: 1;
+    width: 1.2rem;
+    transform: translateX(0);
+}
+
+
+.conection_button,
+.service_button {
+    width: clamp(12rem, 14.26vw, 18rem);
+    height: clamp(2.75rem, 2.86vw, 4rem);
+
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(0.75rem, 1.11vw, 1.3rem);
+    line-height: 120%;
+
+    color: #FFFFFF;
+    white-space: nowrap;
+
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}

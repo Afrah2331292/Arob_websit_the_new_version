@@ -1,0 +1,73 @@
+.serviceholder {
+    position: relative;
+
+    width: 23.958vw;  /* 345px */
+    height: 4.861vw;  /* 70px */
+    background: rgba(87, 72, 50, 0.9);
+    box-shadow: inset 0vw 0.278vw 0.278vw rgba(0, 0, 0, 0.25); /* 0px, 4px, 4px */
+    border-radius: 0.694vw; /* 10px */
+}
+
+
+.service-icon {
+    position: absolute;
+
+    width: 4.861vw;  /* 70px */
+    height: 4.861vw; /* 70px */
+
+    right: 0;
+    top: 0;
+
+    background: linear-gradient(
+            180deg,
+            rgba(87, 72, 50, 0.8) 0%,
+            rgba(182, 150, 104, 0.8) 60.58%,
+            rgba(178, 114, 69, 0.8) 100%
+    );
+
+    box-shadow: -0.139vw 0vw 0.278vw rgba(0, 0, 0, 0.25); /* -2px, 0px, 4px */
+    backdrop-filter: blur(0.260vw); /* 3.75px */
+
+    border-radius: 0vw 0.694vw 0.694vw 0vw; /* 0px, 10px, 10px, 0px */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.service-icon-img {
+    width: 2.333vw;  /* 33.6px */
+    height: 2.333vw; /* 33.6px */
+
+    object-fit: contain;
+}
+
+
+.Service-description {
+    position: absolute;
+
+    top: 50%;
+    right: calc(4.861vw + 1vw); /* عرض الأيقونة + مسافة */
+    left: 1vw;
+
+    transform: translateY(-50%);
+    margin: 0;
+
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.181vw;
+    line-height: 2.222vw;
+
+    direction: rtl;
+    text-align: right;
+
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+
+.serviceholder:hover {
+    transform: scale(1.05);
+}

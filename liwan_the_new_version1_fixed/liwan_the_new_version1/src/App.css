@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cairo:wght@300;400;500;600;700&display=swap');
+
+
+@font-face {
+    font-family: 'GE Snd Book';
+    src: url('/font/GE-SS-Two-Book.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'GE Snd Book', sans-serif;
+}
+
+
+
+.App{
+    background: #F8F2EB;
+    width:100%;
+    height:100%;
+}
+
+html {
+    font-size: clamp(0.625rem, 1.111vw, 1.75rem);
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+/*
+   النافبار position: fixed بارتفاع 64px، فبدون هذا التعويض
+   أي قسم نروح له بالـ anchor يطلع جزء منه مختفي تحت النافبار.
+*/
+#home,
+#discoverLiwan,
+#services,
+#about,
+#advantages,
+#contact {
+    scroll-margin-top: 5rem;
+}
+
+body {
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}

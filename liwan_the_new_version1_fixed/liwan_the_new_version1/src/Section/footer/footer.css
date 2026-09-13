@@ -1,0 +1,844 @@
+/* =========================================
+   Footer
+========================================= */
+
+.Footer_container {
+    position: relative;
+
+    width: 100%;
+    height: 45.208vw; /* 651px */
+
+    background: #1D1D1B;
+}
+
+
+/* =========================================
+   Upper Section
+   المسؤول عن ترتيب الأقسام الثلاثة
+========================================= */
+
+.Upper_section {
+    position: relative;
+
+    width: 90%;
+    height: 34.722vw; /* 500px */
+
+    margin: 0 auto;
+    padding-top: 3.194vw; /* 46px */
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        0.069vw /* 1px */
+        1fr
+        0.069vw /* 1px */
+        1fr;
+
+    align-items: start;
+    justify-items: center;
+}
+
+
+/* =========================================
+   الفاصل العمودي الأول (بين contact و Arob)
+========================================= */
+
+.first_section_separator_line {
+    grid-column: 2;
+    grid-row: 1;
+
+    width: 0.069vw; /* 1px */
+    height: 26.597vw; /* 383px */
+
+    margin-top: 3.472vw; /* 50px */
+
+    opacity: 0.5;
+
+    background: rgba(178, 114, 69, 0.3);
+}
+
+
+/* =========================================
+   الفاصل العمودي الثاني (بين Arob و location)
+========================================= */
+
+.second_section_separator_line {
+    grid-column: 4;
+    grid-row: 1;
+
+    width: 0.069vw; /* 1px */
+    height: 26.597vw; /* 383px */
+
+    margin-top: 3.472vw; /* 50px */
+
+    opacity: 0.5;
+
+    background: rgba(178, 114, 69, 0.3);
+}
+
+
+/* =========================================
+   Contact Section
+========================================= */
+
+.contact_section {
+    position: relative;
+
+    width: 24.861vw; /* 358px */
+    height: auto;
+
+    margin: 0;
+
+    grid-column: 5;
+}
+
+/* =========================================
+   Contact Us
+   يعتمد على contact_section
+========================================= */
+
+.contact_us {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 0.556vw; /* 8px */
+}
+
+
+/* =========================================
+   Contact / Follow Titles
+========================================= */
+
+.contact_us_title,
+.folllow_us_title {
+    width: 9.444vw; /* 136px */
+    height: 2.361vw; /* 34px */
+
+    margin: 0;
+
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 700;
+
+    font-size: 1.597vw; /* 23px */
+    line-height: 120%;
+
+    text-align: right;
+
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   Lines
+========================================= */
+
+.contact_us_line,
+.follow_us_line,
+.Arob_line {
+    width: 2.5vw; /* 36px */
+    height: 0;
+
+    border-top: 0.139vw solid #B27245; /* 2px */
+}
+
+
+/* =========================================
+   Email + Phone Container
+   يعتمد على contact_section
+========================================= */
+
+.phone_email_container {
+    position: absolute;
+
+    right: 0;
+    top: 5.139vw; /* 74px */
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.736vw; /* 25px */
+}
+
+
+/* =========================================
+   Mail + Phone Holder
+========================================= */
+
+.contact_us_mail_holder,
+.contact_us_phone_holder {
+    box-sizing: border-box;
+
+    position: relative;
+
+    width: 24.861vw; /* 358px */
+    height: 4.861vw;  /* 70px */
+
+    background: rgba(29, 29, 27, 0.5);
+
+    border: 0.069vw solid rgba(178, 114, 69, 0.3); /* 1px */
+
+    box-shadow: inset 0px 0.278vw 0.278vw rgba(0, 0, 0, 0.50); /* 4px 4px */
+
+    border-radius: 1.042vw; /* 15px */
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   Noise Effect
+========================================= */
+
+.contact_us_mail_holder::after,
+.contact_us_phone_holder::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+
+    opacity: 0.05;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* =========================================
+   Email + Phone Text
+========================================= */
+
+.mail-text,
+.phone-text {
+    position: absolute;
+
+    right: 5.556vw; /* 80px */
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    margin: 0;
+
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 600;
+
+    font-size: 1.181vw; /* 17px */
+    line-height: 2.222vw; /* 32px */
+
+    text-align: right;
+
+    white-space: nowrap;
+
+    color: #FFFFFF;
+
+    opacity: 0.8;
+
+    z-index: 10;
+}
+
+
+/* =========================================
+   Mail + Phone Icon Holder
+   يعتمد على Mail / Phone Holder
+========================================= */
+
+.mail_icon_holder,
+.phone_icon_holder {
+    position: absolute;
+
+    box-sizing: border-box;
+
+    width: 4.861vw;  /* 70px */
+    height: 4.861vw; /* 70px */
+
+    right: 0;
+    top: 0;
+
+    background: #1D1D1B;
+
+    border: 0.069vw solid rgba(178, 114, 69, 0.3); /* 1px */
+
+    box-shadow: -0.139vw 0px 0.278vw rgba(0, 0, 0, 0.25); /* -2px 4px */
+
+    backdrop-filter: blur(0.260vw); /* 3.75px */
+
+    border-radius: 1.042vw; /* 15px */
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   Mail + Phone Icons
+   يعتمد على Icon Holder
+========================================= */
+
+.mail_icon,
+.phone_icon {
+    position: absolute;
+
+    width: 2.083vw;  /* 30px */
+    height: 2.083vw; /* 30px */
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   Line Between Sections
+   يعتمد على contact_section
+========================================= */
+
+.first_section_to_right_line {
+    position: absolute;
+
+    right: 0;
+    top: 18.75vw; /* 270px */
+
+    width: 23.958vw; /* 345px */
+
+    opacity: 0.5;
+
+    border: 0.069vw solid rgba(178, 114, 69, 0.3); /* 1px */
+
+    transform: rotate(-179.83deg);
+}
+
+
+/* =========================================
+   Follow Us
+   يعتمد على contact_section
+========================================= */
+
+.follow_us {
+    position: absolute;
+
+    right: 0;
+    top: 20.833vw; /* 300px */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 0.556vw; /* 8px */
+}
+
+
+/* =========================================
+   Social Media Container
+   يعتمد على contact_section
+========================================= */
+
+.social_Media {
+    position: absolute;
+
+    right: 0;
+    top: 25.694vw; /* 370px */
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 1.319vw; /* 19px */
+}
+
+
+/* =========================================
+   Social Media Icon Holders
+========================================= */
+
+.linkedIn_icon_holder,
+.X_icon_holder,
+.Whatsapp_icon_holder,
+.Instagram_icon_holder,
+.youTube_icon_holder {
+    position: relative;
+
+    box-sizing: border-box;
+
+    width: 3.889vw;  /* 56px */
+    height: 3.889vw; /* 56px */
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #1D1D1B;
+
+    border: 0.069vw solid rgba(178, 114, 69, 0.3); /* 1px */
+
+    border-radius: 0.694vw; /* 10px */
+
+    text-decoration: none;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   Social Icons - Shine Sweep Effect
+========================================= */
+
+.linkedIn_icon_holder::before,
+.X_icon_holder::before,
+.Whatsapp_icon_holder::before,
+.Instagram_icon_holder::before,
+.youTube_icon_holder::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -75%;
+
+    width: 50%;
+    height: 100%;
+
+    background: linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 100%
+    );
+
+    transform: skewX(-25deg);
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    transition: left 0.6s ease;
+}
+
+.linkedIn_icon_holder:hover::before,
+.X_icon_holder:hover::before,
+.Whatsapp_icon_holder:hover::before,
+.Instagram_icon_holder:hover::before,
+.youTube_icon_holder:hover::before {
+    left: 125%;
+}
+
+
+/* =========================================
+   Social Media Icons
+========================================= */
+
+.LinkedIn_icon,
+.X_icon,
+.Whatsapp_icon,
+.Instagram_icon,
+.youtube_icon {
+    width: 2.083vw;  /* 30px */
+    height: 2.083vw; /* 30px */
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   Arob Section
+========================================= */
+
+.Arob_section {
+    position: relative;
+
+    width: 27.431vw; /* 395px */
+    height: auto;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+    top: 20%;
+    gap: 3.333vw; /* 48px */
+
+    grid-column: 3;
+    grid-row: 1;
+}
+
+/* =========================================
+   Logo + Line Container
+========================================= */
+
+.Aroblogo_line_container {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 2.014vw; /* 29px */
+}
+
+
+/* =========================================
+   Arob Logo
+========================================= */
+
+.Arob_logo_White {
+    position: relative;
+
+    width: 13.403vw; /* 193px */
+    height: 5.486vw; /* 79px */
+
+    left: auto;
+    top: auto;
+
+    transition: transform 0.3s ease;
+}
+
+
+.Arob_line {
+    transition: width 0.3s ease;
+}
+
+
+/* =========================================
+   Hover Effect: Logo + Line
+========================================= */
+
+.Aroblogo_line_container:hover .Arob_logo_White {
+    transform: scale(1.04);
+}
+
+.Aroblogo_line_container:hover .Arob_line {
+    width: 8.333vw; /* 120px */
+}
+
+/* =========================================
+   Arob Description
+========================================= */
+
+.Arob_buttom_description {
+    position: relative;
+
+    width: 27.431vw; /* 395px */
+    height: 4.444vw; /* 64px */
+
+    margin: 0;
+
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 500;
+
+    font-size: 1.25vw; /* 18px */
+    line-height: 2.361vw; /* 34px */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    opacity: 0.5;
+
+    direction: rtl;
+    unicode-bidi: plaintext;
+}
+
+
+/* =========================================
+   Location Section
+========================================= */
+
+.location_section {
+    position: relative;
+
+    grid-column: 1;
+    grid-row: 1;
+
+    width: 27.431vw; /* 395px */
+    height: auto;
+
+    padding: 1.389vw; /* 20px - المسافة من اليسار */
+}
+
+.map_wrapper {
+    position: relative;
+    margin-top: 1.389vw; /* 20px */
+}
+
+/* =========================================
+   Location Title Container
+    location_section
+========================================= */
+
+.location_title_container {
+    position: absolute;
+
+    left: 50%;
+    top: 18.75vw; /* 270px */
+
+    transform: translateX(-50%);
+
+    width: 22.083vw; /* 318px */
+    height: 5.556vw; /* 80px */
+}
+
+
+/* =========================================
+   Location Title Description
+   موقعه بالنسبة إلى location_title_container
+========================================= */
+
+.location_title_description {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 17.361vw; /* 250px */
+    height: 5.556vw; /* 80px */
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    direction: rtl;
+}
+
+
+/* =========================================
+   Location Title
+========================================= */
+
+.location_title {
+    width: 17.014vw; /* 245px */
+    height: 3.681vw; /* 53px */
+
+    margin: 0;
+
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 600;
+
+    font-size: 0.972vw; /* 14px */
+    line-height: 1.806vw; /* 26px */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   Location Description
+========================================= */
+
+.location_description {
+    width: 10.417vw; /* 150px */
+    height: 2.014vw; /* 29px */
+    white-space: nowrap;
+    margin: 0;
+
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 600;
+
+    font-size: 0.694vw; /* 10px */
+    line-height: 1.319vw; /* 19px */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    opacity: 0.5;
+}
+
+
+/* =========================================
+   Location Icon Holder
+   موقعه بالنسبة إلى location_title_container
+========================================= */
+
+.location_icon_holder {
+    position: absolute;
+
+    width: 3.264vw; /* 47px */
+    height: 3.264vw; /* 47px */
+
+    right: 5%;
+    top: 10%;
+
+    background: #1E1E1E;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================
+   Location Icon
+   موقعها بالنسبة إلى location_icon_holder
+========================================= */
+
+.location_icon_buttom {
+    width: 1.667vw; /* 24px */
+    height: 1.667vw; /* 24px */
+
+    object-fit: contain;
+}
+
+
+.location_icon_holder::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+    border-radius: 50%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+
+    opacity: 0.05;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+/* =========================================
+   Lower Section
+   Footer
+========================================= */
+
+.Lower_section {
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    transform: translateX(-50%);
+
+    width: 32.014vw; /* 461px */
+    height: 9.167vw; /* 132px */
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+/* =========================================
+   Copyright Sentence
+   موقعه بالنسبة إلى Lower_section
+========================================= */
+
+.copy_right_sentence {
+    position: relative;
+
+    width: 32.014vw; /* 461px */
+    height: 5.139vw; /* 74px */
+
+    margin: 0;
+
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 500;
+
+    font-size: 1.111vw; /* 16px */
+    line-height: 2.083vw; /* 30px */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    opacity: 0.8;
+
+    direction: rtl;
+}
+
+
+/* =========================================
+   Copyright
+   موقعه بالنسبة إلى Lower_section
+========================================= */
+
+.copyright {
+    position: relative;
+
+    width: 32.014vw; /* 461px */
+    height: 4.028vw; /* 58px */
+
+    margin: 0;
+
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 500;
+
+    font-size: 1.042vw; /* 15px */
+    line-height: 1.944vw; /* 28px */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    color: #FFFFFF;
+
+    opacity: 0.5;
+
+    direction: rtl;
+}
+
+.footer_line {
+    /* Line 10 */
+
+    position: absolute;
+    width: 87.5vw; /* 1260px */
+    height: 0px;
+    left: calc(50% - 43.75vw); /* 1260px/2 */
+    top: 35.922vw; /* 517.28px */
+
+    opacity: 0.5;
+    border: 0.069vw solid rgba(178, 114, 69, 0.3); /* 1px */
+    transform: rotate(-179.83deg);
+}

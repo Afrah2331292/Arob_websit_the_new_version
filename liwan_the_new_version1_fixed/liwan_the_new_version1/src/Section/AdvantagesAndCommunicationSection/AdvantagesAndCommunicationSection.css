@@ -1,0 +1,103 @@
+.AdvantagesAndCommunicationSection {
+    position: relative;
+    width: 100%;
+    height: 111.111vw; /* 1600px */
+    z-index: 7;
+
+    background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.7) 35.68%,
+            rgba(189, 156, 109, 0.7) 62.61%,
+            rgba(176, 146, 101, 0.7) 76.63%,
+            rgba(87, 72, 50, 0.7) 100%
+    ), #FFFFFF;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.advantages-title {
+    margin: 2.361vw 0 0; /* 34px */
+
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.472vw; /* 50px */
+    line-height: 160%;
+    text-align: center;
+
+    color: #1D1D1B;
+}
+
+.advantages-container {
+    margin-top: 6.944vw; /* 100px */
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 18.472vw); /* 266px */
+
+    justify-content: center;
+
+    column-gap: 5.556vw; /* 80px */
+    row-gap: 5.556vw;    /* 80px */
+}
+
+.advantagespattern {
+
+    position: absolute;
+    width: 6.58vw;
+    height: auto;
+    right: 2.5%;
+    top: 0%;
+
+}
+
+.contact_section_holder {
+    position: absolute;
+
+    left: 10%;
+    bottom: 3%;
+
+}
+
+.Liwan_title_logo_container {
+    position: absolute;
+
+    right: 10%;
+    bottom: 27%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 10px;
+}
+
+.Liwan_contact_title {
+    position: static;
+
+    width: 24.861vw;
+    min-height: 6.944vw;
+    height: auto;
+
+    margin: 0;
+
+    font-family: 'Cairo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.819vw;
+    line-height: 160%;
+    text-align: right;
+
+    color: #1D1D1B;
+}
+
+.Liwan_contact_logo {
+    position: static;
+
+    width: 22.361vw;
+    height: 13.403vw;
+
+    display: block;
+}
