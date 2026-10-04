@@ -1,14 +1,8 @@
 import "./PhotoHolder.css";
 
-function PhotoHolder({ image, name, jobTitle, linkedinUrl }) {
+function PhotoHolder({ image, name, jobTitle }) {
     return (
-        <a
-            className="team-card"
-            href={linkedinUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`الملف الشخصي لـ ${name} على لينكد إن`}
-        >
+        <div className="team-card" tabIndex={0}>
             <div className="team-card__surface">
                 <span className="team-card__corner" aria-hidden="true" />
                 <span className="team-card__paper" aria-hidden="true" />
@@ -26,7 +20,7 @@ function PhotoHolder({ image, name, jobTitle, linkedinUrl }) {
                     <p>{jobTitle}</p>
                 </div>
             </div>
-        </a>
+        </div>
     );
 }
 

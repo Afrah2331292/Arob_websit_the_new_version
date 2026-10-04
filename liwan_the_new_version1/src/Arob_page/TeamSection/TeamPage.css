@@ -21,7 +21,7 @@
 
     /* سبعة أشخاص في كل صف */
     grid-template-columns: repeat(7, minmax(0, 1fr));
-    gap: 0.6944vw 0.3472vw;
+    gap: 1vw 2.5vw;
 
     justify-items: center;
     align-items: start;
