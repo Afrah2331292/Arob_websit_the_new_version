@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cairo:wght@300;400;500;600;700&display=swap");
+@font-face {
+    font-family: "GE Snd Book";
+    src: url("/font/GE-SS-Two-Book.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 
 .App {
     background: #ffffff;
