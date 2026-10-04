@@ -1,19 +1,27 @@
 import "./Dropdown.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 function Dropdown({
                       title,
                       items,
                       titleClassName,
-                      mobileMenuOpen
+                      mobileMenuOpen,
+                      titleLink,
                   }) {
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const navigate = useNavigate();
 
-    useEffect(() => {
+    const [previousMobileMenuOpen, setPreviousMobileMenuOpen] =
+        useState(mobileMenuOpen);
+
+    if (previousMobileMenuOpen !== mobileMenuOpen) {
+        setPreviousMobileMenuOpen(mobileMenuOpen);
+
         if (!mobileMenuOpen) {
             setDropdownOpen(false);
         }
-    }, [mobileMenuOpen]);
+    }
 
     return (
         <div className={`dropdown ${dropdownOpen ? "is-open" : ""}`}>
@@ -22,6 +30,10 @@ function Dropdown({
                 className={`dropdown-title ${titleClassName || ""}`}
                 aria-expanded={dropdownOpen}
                 onClick={() => {
+                    if (titleLink) {
+                        navigate(titleLink);
+                    }
+
                     setDropdownOpen((isOpen) => !isOpen);
                 }}
             >
@@ -32,13 +44,13 @@ function Dropdown({
             <div className="dropdown-menu">
                 {items.map((item, index) =>
                     item.link ? (
-                        <a
-                            href={item.link}
+                        <Link
+                            to={item.link}
                             key={index}
                             onClick={() => setDropdownOpen(false)}
                         >
                             {item.name}
-                        </a>
+                        </Link>
                     ) : (
                         <span className="disabled-link" key={index}>
                             {item.name}

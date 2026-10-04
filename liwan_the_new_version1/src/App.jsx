@@ -1,29 +1,63 @@
-import Hero from "./Section/HeroSection/Hero.jsx";
-import Cards from "./Section/discoverLiwan/cards.jsx";
-import "./App.css"
-import Services from "./Section/Services/services.jsx";
-import AdvantagesAndCommunicationSection from "./Section/AdvantagesAndCommunicationSection/AdvantagesAndCommunicationSection.jsx";
+import { useEffect } from "react";
+import "./App.css";
 import Footer from "./Section/footer/footer.jsx";
+
+
+import {
+    Routes,
+    Route,
+    Navigate,
+    useLocation
+} from "react-router-dom";
+
 import NavBar from "./Section/NavBar/NavBar.jsx";
 
+import ArobPage from "./Arob_page/ArobPage.jsx";
+import LiwanPage from "./Liwan_page/LiwanPage.jsx";
 
+function App() {
+    const { pathname, hash, key } = useLocation();
 
+    useEffect(() => {
+        if (!hash) return;
 
-function App(){
-    return(
+        const frame = requestAnimationFrame(() => {
+            const sectionId = decodeURIComponent(hash.slice(1));
+            document.getElementById(sectionId)?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        });
+
+        return () => cancelAnimationFrame(frame);
+    }, [pathname, hash, key]);
+
+    const variant = pathname.startsWith("/liwan")
+        ? "liwan"
+        : "arob";
+
+    return (
         <div className="App">
-            <NavBar/>
-            <Hero/>
-            <Cards/>
-            <Services/>
-            <AdvantagesAndCommunicationSection/>
-            <Footer/>
+            <NavBar variant={variant} />
 
+            <Routes>
+                <Route path="/" element={<ArobPage />} />
 
+                <Route
+                    path="/liwan"
+                    element={<LiwanPage />}
+                />
+
+                <Route
+                    path="*"
+                    element={<Navigate to="/" replace />}
+                />
+            </Routes>
+
+            <Footer variant={variant} />
 
         </div>
-
     );
-
 }
-export default App
+
+export default App;

@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "title": "Your Advisor for Sustainability and Growth",
+    "description": "At Arob, we turn visions into strategies and opportunities into sustainable growth, creating value that extends beyond the present and into the future."
+  },
+  "about": {
+    "label": "— About Arob",
+    "title": "Who We Are",
+    "questionMark": "?",
+    "description": "Founded in 2018, Arob is a Saudi company providing executive consulting that helps organizations achieve sustainability and growth through extensive expertise in selected sectors.",
+    "investment": "Investments Under Management",
+    "projects": "Completed Projects",
+    "imageAlt": "About Arob"
+  },
+  "purpose": {
+    "title": "What Drives Us",
+    "missionTitle": "Our Mission",
+    "missionDescription": "To provide executive consulting that supports business sustainability and growth through sector specialists, using the latest technologies and practical models with measurable impact.",
+    "visionTitle": "Our Vision",
+    "visionDescription": "To lead in achieving business sustainability and growth and advancing knowledge across multiple sectors.",
+    "valuesTitle": "Our Values",
+    "valuesDescription": "Innovation, commitment, sustainability, transparency, and teamwork guide everything we do."
+  },
+  "team": {
+    "leadershipTitle": "Our Leadership",
+    "teamTitle": "Our Team",
+    "description": "A team of skilled professionals whose expertise guides Arob toward a more sustainable future.",
+    "boardTab": "Board of Directors",
+    "teamTab": "Team",
+    "quote": "We believe effective leadership is the foundation for creating opportunities and building a more sustainable future.",
+    "previous": "Previous Group",
+    "next": "Next Group",
+    "profileLabel": "{{name}}'s LinkedIn profile"
+  },
+  "services": {
+    "title": "Integrated Services for Greater Value",
+    "items": {
+      "01": {
+        "title": "Marketing",
+        "description": "Digital marketing strategy and marketing strategy development."
+      },
+      "02": {
+        "title": "Project Management",
+        "description": "Establishing and operating Project Management Offices (PMOs) to deliver projects."
+      },
+      "03": {
+        "title": "Governance",
+        "description": "Governance for boards, committees, and clients."
+      },
+      "04": {
+        "title": "Incubation and Acceleration Programs",
+        "description": "Establishing, operating, and managing incubation and acceleration programs."
+      },
+      "05": {
+        "title": "Sustainability and Growth Program",
+        "description": "A strategic program designed to help companies achieve balanced, sustainable growth by building flexible business models, improving operational efficiency, and strengthening their ability to adapt to market changes."
+      },
+      "06": {
+        "title": "Finance and Investment",
+        "description": "Governance for boards, committees, and clients."
+      },
+      "07": {
+        "title": "Executive Business Management",
+        "description": "A specialized service for efficiently managing and operating companies, handling daily executive responsibilities and developing operational plans to achieve strategic goals. It includes overseeing departments, improving performance, managing resources, and monitoring key performance indicators."
+      }
+    }
+  },
+  "clients": {
+    "title": "Our Clients",
+    "logoAlt": "Client logo {{number}}"
+  }
+}

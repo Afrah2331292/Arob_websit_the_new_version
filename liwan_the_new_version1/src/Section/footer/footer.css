@@ -1,82 +1,90 @@
 /* =========================================
+   ألوان ليوان الأصلية
+========================================= */
+
+.Footer_container {
+    --footer-bg: #1D1D1B;
+    --footer-text: #FFFFFF;
+    --footer-accent: #B27245;
+    --footer-border: rgba(178, 114, 69, 0.3);
+    --footer-card-bg: rgba(29, 29, 27, 0.5);
+    --footer-location-bg: #1E1E1E;
+    --footer-map-border: rgba(178, 114, 69, 0.2);
+    --footer-map-button-bg: #000000;
+}
+
+/* =========================================
+   ألوان أرب
+========================================= */
+
+.Footer_container--arob {
+    --footer-bg: #132D4A;
+    --footer-text: #FFFFFF;
+    --footer-accent: #50A859;
+    --footer-border: rgba(80, 168, 89, 0.3);
+    --footer-card-bg: rgba(13, 32, 53, 0.5);
+    --footer-location-bg: #0D2035;
+    --footer-map-border: rgba(80, 168, 89, 0.2);
+    --footer-map-button-bg: #0D2035;
+}
+
+/* =========================================
    Footer
 ========================================= */
 
 .Footer_container {
     position: relative;
-
     width: 100%;
     height: 45.208vw; /* 651px */
-
-    background: #1D1D1B;
+    background: var(--footer-bg);
 }
-
 
 /* =========================================
    Upper Section
-   المسؤول عن ترتيب الأقسام الثلاثة
 ========================================= */
 
 .Upper_section {
     position: relative;
-
     width: 90%;
     height: 34.722vw; /* 500px */
-
     margin: 0 auto;
     padding-top: 3.194vw; /* 46px */
 
     display: grid;
-
     grid-template-columns:
         1fr
-        0.069vw /* 1px */
+        0.069vw
         1fr
-        0.069vw /* 1px */
+        0.069vw
         1fr;
 
     align-items: start;
     justify-items: center;
 }
 
-
 /* =========================================
-   الفاصل العمودي الأول (بين contact و Arob)
+   الفواصل العمودية
 ========================================= */
 
 .first_section_separator_line {
     grid-column: 2;
     grid-row: 1;
-
-    width: 0.069vw; /* 1px */
-    height: 26.597vw; /* 383px */
-
-    margin-top: 3.472vw; /* 50px */
-
+    width: 0.069vw;
+    height: 26.597vw;
+    margin-top: 3.472vw;
     opacity: 0.5;
-
-    background: rgba(178, 114, 69, 0.3);
+    background: var(--footer-border);
 }
-
-
-/* =========================================
-   الفاصل العمودي الثاني (بين Arob و location)
-========================================= */
 
 .second_section_separator_line {
     grid-column: 4;
     grid-row: 1;
-
-    width: 0.069vw; /* 1px */
-    height: 26.597vw; /* 383px */
-
-    margin-top: 3.472vw; /* 50px */
-
+    width: 0.069vw;
+    height: 26.597vw;
+    margin-top: 3.472vw;
     opacity: 0.5;
-
-    background: rgba(178, 114, 69, 0.3);
+    background: var(--footer-border);
 }
-
 
 /* =========================================
    Contact Section
@@ -84,33 +92,22 @@
 
 .contact_section {
     position: relative;
-
-    width: 24.861vw; /* 358px */
+    width: 24.861vw;
     height: auto;
-
     margin: 0;
-
     grid-column: 5;
 }
 
-/* =========================================
-   Contact Us
-   يعتمد على contact_section
-========================================= */
-
 .contact_us {
     position: absolute;
-
     right: 0;
     top: 0;
 
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
-    gap: 0.556vw; /* 8px */
+    gap: 0.556vw;
 }
-
 
 /* =========================================
    Contact / Follow Titles
@@ -118,23 +115,19 @@
 
 .contact_us_title,
 .folllow_us_title {
-    width: 9.444vw; /* 136px */
-    height: 2.361vw; /* 34px */
-
+    width: 9.444vw;
+    height: 2.361vw;
     margin: 0;
 
     font-family: 'Cairo';
     font-style: normal;
     font-weight: 700;
-
-    font-size: 1.597vw; /* 23px */
+    font-size: 1.597vw;
     line-height: 120%;
 
     text-align: right;
-
-    color: #FFFFFF;
+    color: var(--footer-text);
 }
-
 
 /* =========================================
    Lines
@@ -143,30 +136,24 @@
 .contact_us_line,
 .follow_us_line,
 .Arob_line {
-    width: 2.5vw; /* 36px */
+    width: 2.5vw;
     height: 0;
-
-    border-top: 0.139vw solid #B27245; /* 2px */
+    border-top: 0.139vw solid var(--footer-accent);
 }
-
 
 /* =========================================
    Email + Phone Container
-   يعتمد على contact_section
 ========================================= */
 
 .phone_email_container {
     position: absolute;
-
     right: 0;
-    top: 5.139vw; /* 74px */
+    top: 5.139vw;
 
     display: flex;
     flex-direction: column;
-
-    gap: 1.736vw; /* 25px */
+    gap: 1.736vw;
 }
-
 
 /* =========================================
    Mail + Phone Holder
@@ -175,23 +162,19 @@
 .contact_us_mail_holder,
 .contact_us_phone_holder {
     box-sizing: border-box;
-
     position: relative;
 
-    width: 24.861vw; /* 358px */
-    height: 4.861vw;  /* 70px */
+    width: 24.861vw;
+    height: 4.861vw;
 
-    background: rgba(29, 29, 27, 0.5);
+    background: var(--footer-card-bg);
+    border: 0.069vw solid var(--footer-border);
+    box-shadow:
+            inset 0px 0.278vw 0.278vw rgba(0, 0, 0, 0.50);
 
-    border: 0.069vw solid rgba(178, 114, 69, 0.3); /* 1px */
-
-    box-shadow: inset 0px 0.278vw 0.278vw rgba(0, 0, 0, 0.50); /* 4px 4px */
-
-    border-radius: 1.042vw; /* 15px */
-
+    border-radius: 1.042vw;
     overflow: hidden;
 }
-
 
 /* =========================================
    Noise Effect
@@ -200,20 +183,15 @@
 .contact_us_mail_holder::after,
 .contact_us_phone_holder::after {
     content: "";
-
     position: absolute;
-
     inset: 0;
 
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 
     opacity: 0.05;
-
     pointer-events: none;
-
     z-index: 1;
 }
-
 
 /* =========================================
    Email + Phone Text
@@ -222,147 +200,108 @@
 .mail-text,
 .phone-text {
     position: absolute;
-
-    right: 5.556vw; /* 80px */
+    right: 5.556vw;
     top: 50%;
-
     transform: translateY(-50%);
-
     margin: 0;
 
     font-family: 'Cairo';
     font-style: normal;
     font-weight: 600;
-
-    font-size: 1.181vw; /* 17px */
-    line-height: 2.222vw; /* 32px */
+    font-size: 1.181vw;
+    line-height: 2.222vw;
 
     text-align: right;
-
     white-space: nowrap;
-
-    color: #FFFFFF;
-
+    color: var(--footer-text);
     opacity: 0.8;
-
     z-index: 10;
 }
 
-
 /* =========================================
    Mail + Phone Icon Holder
-   يعتمد على Mail / Phone Holder
 ========================================= */
 
 .mail_icon_holder,
 .phone_icon_holder {
     position: absolute;
-
     box-sizing: border-box;
 
-    width: 4.861vw;  /* 70px */
-    height: 4.861vw; /* 70px */
-
+    width: 4.861vw;
+    height: 4.861vw;
     right: 0;
     top: 0;
 
-    background: #1D1D1B;
+    background: var(--footer-bg);
+    border: 0.069vw solid var(--footer-border);
+    box-shadow:
+            -0.139vw 0px 0.278vw rgba(0, 0, 0, 0.25);
 
-    border: 0.069vw solid rgba(178, 114, 69, 0.3); /* 1px */
-
-    box-shadow: -0.139vw 0px 0.278vw rgba(0, 0, 0, 0.25); /* -2px 4px */
-
-    backdrop-filter: blur(0.260vw); /* 3.75px */
-
-    border-radius: 1.042vw; /* 15px */
-
+    backdrop-filter: blur(0.260vw);
+    border-radius: 1.042vw;
     z-index: 5;
 }
 
-
 /* =========================================
    Mail + Phone Icons
-   يعتمد على Icon Holder
 ========================================= */
 
 .mail_icon,
 .phone_icon {
     position: absolute;
-
-    width: 2.083vw;  /* 30px */
-    height: 2.083vw; /* 30px */
-
+    width: 2.083vw;
+    height: 2.083vw;
     left: 50%;
     top: 50%;
-
     transform: translate(-50%, -50%);
-
     object-fit: contain;
 }
 
-
 /* =========================================
    Line Between Sections
-   يعتمد على contact_section
 ========================================= */
 
 .first_section_to_right_line {
     position: absolute;
-
     right: 0;
-    top: 18.75vw; /* 270px */
-
-    width: 23.958vw; /* 345px */
+    top: 18.75vw;
+    width: 23.958vw;
 
     opacity: 0.5;
-
-    border: 0.069vw solid rgba(178, 114, 69, 0.3); /* 1px */
-
+    border: 0.069vw solid var(--footer-border);
     transform: rotate(-179.83deg);
 }
 
-
 /* =========================================
    Follow Us
-   يعتمد على contact_section
 ========================================= */
 
 .follow_us {
     position: absolute;
-
     right: 0;
-    top: 20.833vw; /* 300px */
+    top: 20.833vw;
 
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
-    gap: 0.556vw; /* 8px */
+    gap: 0.556vw;
 }
-
 
 /* =========================================
    Social Media Container
-   يعتمد على contact_section
 ========================================= */
 
 .social_Media {
     position: absolute;
-
     right: 0;
-    top: 25.694vw; /* 370px */
+    top: 25.694vw;
 
     display: flex;
-
     flex-direction: row;
-
     align-items: center;
-
     justify-content: flex-end;
-
-    gap: 1.319vw; /* 19px */
+    gap: 1.319vw;
 }
-
 
 /* =========================================
    Social Media Icon Holders
@@ -374,28 +313,22 @@
 .Instagram_icon_holder,
 .youTube_icon_holder {
     position: relative;
-
     box-sizing: border-box;
 
-    width: 3.889vw;  /* 56px */
-    height: 3.889vw; /* 56px */
+    width: 3.889vw;
+    height: 3.889vw;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
-    background: #1D1D1B;
-
-    border: 0.069vw solid rgba(178, 114, 69, 0.3); /* 1px */
-
-    border-radius: 0.694vw; /* 10px */
+    background: var(--footer-bg);
+    border: 0.069vw solid var(--footer-border);
+    border-radius: 0.694vw;
 
     text-decoration: none;
-
     overflow: hidden;
 }
-
 
 /* =========================================
    Social Icons - Shine Sweep Effect
@@ -407,12 +340,9 @@
 .Instagram_icon_holder::before,
 .youTube_icon_holder::before {
     content: "";
-
     position: absolute;
-
     top: 0;
     left: -75%;
-
     width: 50%;
     height: 100%;
 
@@ -424,11 +354,8 @@
     );
 
     transform: skewX(-25deg);
-
     pointer-events: none;
-
     z-index: 2;
-
     transition: left 0.6s ease;
 }
 
@@ -440,7 +367,6 @@
     left: 125%;
 }
 
-
 /* =========================================
    Social Media Icons
 ========================================= */
@@ -450,12 +376,10 @@
 .Whatsapp_icon,
 .Instagram_icon,
 .youtube_icon {
-    width: 2.083vw;  /* 30px */
-    height: 2.083vw; /* 30px */
-
+    width: 2.083vw;
+    height: 2.083vw;
     object-fit: contain;
 }
-
 
 /* =========================================
    Arob Section
@@ -463,20 +387,17 @@
 
 .Arob_section {
     position: relative;
-
-    width: 27.431vw; /* 395px */
+    width: 27.431vw;
     height: auto;
-
     margin: 0;
 
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-content: flex-start;
-    top: 20%;
-    gap: 3.333vw; /* 48px */
 
+    top: 20%;
+    gap: 3.333vw;
     grid-column: 3;
     grid-row: 1;
 }
@@ -490,13 +411,10 @@
 
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-content: flex-start;
-
-    gap: 2.014vw; /* 29px */
+    gap: 2.014vw;
 }
-
 
 /* =========================================
    Arob Logo
@@ -504,21 +422,16 @@
 
 .Arob_logo_White {
     position: relative;
-
-    width: 13.403vw; /* 193px */
-    height: 5.486vw; /* 79px */
-
+    width: 13.403vw;
+    height: 5.486vw;
     left: auto;
     top: auto;
-
     transition: transform 0.3s ease;
 }
-
 
 .Arob_line {
     transition: width 0.3s ease;
 }
-
 
 /* =========================================
    Hover Effect: Logo + Line
@@ -529,7 +442,7 @@
 }
 
 .Aroblogo_line_container:hover .Arob_line {
-    width: 8.333vw; /* 120px */
+    width: 8.333vw;
 }
 
 /* =========================================
@@ -538,33 +451,27 @@
 
 .Arob_buttom_description {
     position: relative;
-
-    width: 27.431vw; /* 395px */
-    height: 4.444vw; /* 64px */
-
+    width: 27.431vw;
+    height: 4.444vw;
     margin: 0;
 
     font-family: 'Cairo';
     font-style: normal;
     font-weight: 500;
-
-    font-size: 1.25vw; /* 18px */
-    line-height: 2.361vw; /* 34px */
+    font-size: 1.25vw;
+    line-height: 2.361vw;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     text-align: center;
-
-    color: #FFFFFF;
-
+    color: var(--footer-text);
     opacity: 0.5;
 
     direction: rtl;
     unicode-bidi: plaintext;
 }
-
 
 /* =========================================
    Location Section
@@ -572,135 +479,112 @@
 
 .location_section {
     position: relative;
-
     grid-column: 1;
     grid-row: 1;
 
-    width: 27.431vw; /* 395px */
+    width: 27.431vw;
     height: auto;
-
-    padding: 1.389vw; /* 20px - المسافة من اليسار */
+    padding: 1.389vw;
 }
 
 .map_wrapper {
     position: relative;
-    margin-top: 1.389vw; /* 20px */
+    margin-top: 1.389vw;
 }
 
 /* =========================================
    Location Title Container
-    location_section
 ========================================= */
 
 .location_title_container {
     position: absolute;
-
     left: 50%;
-    top: 18.75vw; /* 270px */
-
+    top: 18.75vw;
     transform: translateX(-50%);
 
-    width: 22.083vw; /* 318px */
-    height: 5.556vw; /* 80px */
+    width: 22.083vw;
+    height: 5.556vw;
 }
-
 
 /* =========================================
    Location Title Description
-   موقعه بالنسبة إلى location_title_container
 ========================================= */
 
 .location_title_description {
     position: absolute;
-
     left: 0;
     top: 0;
 
-    width: 17.361vw; /* 250px */
-    height: 5.556vw; /* 80px */
+    width: 17.361vw;
+    height: 5.556vw;
 
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-content: flex-start;
-
     direction: rtl;
 }
-
 
 /* =========================================
    Location Title
 ========================================= */
 
 .location_title {
-    width: 17.014vw; /* 245px */
-    height: 3.681vw; /* 53px */
-
+    width: 17.014vw;
+    height: 3.681vw;
     margin: 0;
 
     font-family: 'Cairo';
     font-style: normal;
     font-weight: 600;
-
-    font-size: 0.972vw; /* 14px */
-    line-height: 1.806vw; /* 26px */
+    font-size: 0.972vw;
+    line-height: 1.806vw;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     text-align: center;
-
-    color: #FFFFFF;
+    color: var(--footer-text);
 }
-
 
 /* =========================================
    Location Description
 ========================================= */
 
 .location_description {
-    width: 10.417vw; /* 150px */
-    height: 2.014vw; /* 29px */
+    width: 10.417vw;
+    height: 2.014vw;
     white-space: nowrap;
     margin: 0;
 
     font-family: 'Cairo';
     font-style: normal;
     font-weight: 600;
-
-    font-size: 0.694vw; /* 10px */
-    line-height: 1.319vw; /* 19px */
+    font-size: 0.694vw;
+    line-height: 1.319vw;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     text-align: center;
-
-    color: #FFFFFF;
-
+    color: var(--footer-text);
     opacity: 0.5;
 }
 
-
 /* =========================================
    Location Icon Holder
-   موقعه بالنسبة إلى location_title_container
 ========================================= */
 
 .location_icon_holder {
     position: absolute;
-
-    width: 3.264vw; /* 47px */
-    height: 3.264vw; /* 47px */
-
+    width: 3.264vw;
+    height: 3.264vw;
     right: 5%;
     top: 10%;
 
-    background: #1E1E1E;
-
+    background: var(--footer-location-bg);
     border-radius: 50%;
 
     display: flex;
@@ -708,137 +592,133 @@
     justify-content: center;
 }
 
-
 /* =========================================
    Location Icon
-   موقعها بالنسبة إلى location_icon_holder
 ========================================= */
 
 .location_icon_buttom {
-    width: 1.667vw; /* 24px */
-    height: 1.667vw; /* 24px */
-
+    width: 1.667vw;
+    height: 1.667vw;
     object-fit: contain;
 }
 
-
 .location_icon_holder::after {
     content: "";
-
     position: absolute;
-
     inset: 0;
     border-radius: 50%;
+
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 
     opacity: 0.05;
-
     pointer-events: none;
-
     z-index: 1;
 }
 
 /* =========================================
    Lower Section
-   Footer
 ========================================= */
 
 .Lower_section {
     position: absolute;
-
     left: 50%;
     bottom: 0;
-
     transform: translateX(-50%);
 
-    width: 32.014vw; /* 461px */
-    height: 9.167vw; /* 132px */
+    width: 32.014vw;
+    height: 9.167vw;
 
     display: flex;
     flex-direction: column;
-
     align-items: center;
     justify-content: flex-start;
 }
 
-
 /* =========================================
    Copyright Sentence
-   موقعه بالنسبة إلى Lower_section
 ========================================= */
 
 .copy_right_sentence {
     position: relative;
-
-    width: 32.014vw; /* 461px */
-    height: 5.139vw; /* 74px */
-
+    width: 32.014vw;
+    height: 5.139vw;
     margin: 0;
 
     font-family: 'Cairo';
     font-style: normal;
     font-weight: 500;
-
-    font-size: 1.111vw; /* 16px */
-    line-height: 2.083vw; /* 30px */
+    font-size: 1.111vw;
+    line-height: 2.083vw;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     text-align: center;
-
-    color: #FFFFFF;
-
+    color: var(--footer-text);
     opacity: 0.8;
-
     direction: rtl;
 }
 
-
 /* =========================================
    Copyright
-   موقعه بالنسبة إلى Lower_section
 ========================================= */
 
 .copyright {
     position: relative;
-
-    width: 32.014vw; /* 461px */
-    height: 4.028vw; /* 58px */
-
+    width: 32.014vw;
+    height: 4.028vw;
     margin: 0;
 
     font-family: 'Cairo';
     font-style: normal;
     font-weight: 500;
-
-    font-size: 1.042vw; /* 15px */
-    line-height: 1.944vw; /* 28px */
+    font-size: 1.042vw;
+    line-height: 1.944vw;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     text-align: center;
-
-    color: #FFFFFF;
-
+    color: var(--footer-text);
     opacity: 0.5;
-
     direction: rtl;
 }
 
 .footer_line {
-    /* Line 10 */
-
     position: absolute;
-    width: 87.5vw; /* 1260px */
+    width: 87.5vw;
     height: 0px;
-    left: calc(50% - 43.75vw); /* 1260px/2 */
-    top: 35.922vw; /* 517.28px */
+    left: calc(50% - 43.75vw);
+    top: 35.922vw;
 
     opacity: 0.5;
-    border: 0.069vw solid rgba(178, 114, 69, 0.3); /* 1px */
+    border: 0.069vw solid var(--footer-border);
     transform: rotate(-179.83deg);
+}
+
+/* =========================================
+   ألوان عناصر الخريطة داخل الفوتر
+========================================= */
+
+.Footer_container .map-container {
+    border-color: var(--footer-map-border);
+}
+
+.Footer_container .company-name,
+.Footer_container .map-view-box {
+    color: var(--footer-text);
+}
+
+.Footer_container .map-view-box {
+    background: var(--footer-map-button-bg);
+}
+
+.Footer_container .company-location-icon path {
+    fill: var(--footer-accent);
+}
+
+.Footer_container .footer-accent-icon {
+    color: var(--footer-accent);
 }

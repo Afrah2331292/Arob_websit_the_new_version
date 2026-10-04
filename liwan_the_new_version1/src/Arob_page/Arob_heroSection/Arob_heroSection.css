@@ -1,0 +1,89 @@
+.arob-hero-section {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    padding-inline: 7vw;
+
+    box-sizing: border-box;
+}
+
+/* فيديو الخلفية */
+.hero-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+/* محتوى الهيرو */
+.hero-content {
+    position: relative;
+    z-index: 10;
+
+    /* يعادل 608px عند عرض متصفح 1440px */
+    width: 42.2222vw;
+
+    /* يدفع المحتوى إلى اليمين */
+    margin-left: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    /* يعادل 24px عند عرض متصفح 1440px */
+    gap: 1.6667vw;
+
+    text-align: right;
+    direction: rtl;
+}
+
+.hero-content h1 {
+    margin: 0;
+
+    font-family: "Cairo";
+    font-style: normal;
+    font-weight: 700;
+
+    /* يعادل 32px عند عرض متصفح 1440px */
+    font-size: 2.2222vw;
+
+    line-height: 1.6;
+    text-align: right;
+    color: #50A859;
+}
+
+.hero-content p {
+    margin: 0;
+
+    font-family: "GE Snd Book";
+    font-style: normal;
+    font-weight: 400;
+
+    /* يعادل 28px عند عرض متصفح 1440px */
+    font-size: 1.9444vw;
+
+    line-height: 1.6;
+    color: #EFE8DF;
+    opacity: 0.75;
+}
+.arob-hero-section .hero-content[dir="ltr"] {
+    direction: ltr;
+    text-align: left;
+}
+
+.arob-hero-section .hero-content[dir="ltr"] h1,
+.arob-hero-section .hero-content[dir="ltr"] p {
+    text-align: left;
+}

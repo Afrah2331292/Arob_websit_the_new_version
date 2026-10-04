@@ -1,0 +1,515 @@
+/* =========================================================
+   ArobPage.mobile.css
+   Phone-only layout (screens up to 767px wide).
+   Everything is inside ONE media query, so desktop and
+   tablet are not affected at all.
+
+   Selectors start with ".arob-page" so they win over the
+   desktop rules no matter which CSS file loads first.
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    /* ---------- page ---------- */
+    .arob-page {
+        overflow: clip;               /* no sideways scroll, keeps sticky working */
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
+    /* reveal animation: bigger travel distance on a small screen */
+    .arob-page .reveal-up,
+    .arob-page .arob-about-section .reveal-up {
+        transform: translateY(6vw);
+    }
+
+    .arob-page .reveal-up.visible,
+    .arob-page .arob-about-section .reveal-up.visible {
+        transform: translateY(0);
+    }
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+    .arob-page .arob-hero-section {
+        padding-inline: 6vw;
+    }
+
+    .arob-page .hero-content {
+        width: 100%;
+        gap: 4vw;
+    }
+
+    .arob-page .hero-content h1 {
+        font-size: clamp(24px, 7.4vw, 40px);
+        line-height: 1.5;
+    }
+
+    .arob-page .hero-content p {
+        font-size: clamp(14px, 4vw, 22px);
+        line-height: 1.8;
+    }
+
+    /* =====================================================
+       PATTERN BACKGROUND (behind About + Vision)
+       ===================================================== */
+    .arob-page .arob-pattern-row {
+        gap: 14vw;
+        left: -25vw;
+        top: 28%;
+    }
+
+    .arob-page .arob-pattern-unit {
+        width: 42vw;
+        border-top-width: 0.8vw;
+        border-right-width: 0.8vw;
+    }
+
+    .arob-page .arob-pattern-unit::before,
+    .arob-page .arob-pattern-unit::after {
+        border-left-width: 0.8vw;
+        border-bottom-width: 0.8vw;
+    }
+
+    /* =====================================================
+       ABOUT ("من نحن؟")
+       ===================================================== */
+    .arob-page .arob-about-section {
+        height: auto;
+        padding: 18vw 6vw 30vw;
+    }
+
+    .arob-page .about-container {
+        width: 100%;
+        height: auto;
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 16vw;
+    }
+
+    .arob-page .about-content {
+        gap: 4vw;
+    }
+
+    .arob-page .about-label {
+        font-size: clamp(14px, 4.2vw, 20px);
+    }
+
+    .arob-page .about-content h2 {
+        font-size: clamp(30px, 9vw, 54px);
+    }
+
+    .arob-page .about-question-mark {
+        font-size: clamp(40px, 12vw, 70px);
+    }
+
+    .arob-page .about-description {
+        margin: 0;
+        font-size: clamp(13px, 3.6vw, 20px);
+        line-height: 1.8;
+    }
+
+
+
+    /* image + decoration */
+    .arob-page .about-media {
+        width: 78%;
+        justify-self: center;
+    }
+
+    .arob-page .about-decoration {
+        top: -12vw;
+        right: -14vw;
+        width: 38vw;
+    }
+
+    .arob-page .about-photo {
+        border-radius: 3vw;
+    }
+
+    /* =====================================================
+       VISION / MISSION / VALUES
+       ===================================================== */
+    .arob-page .purpose-section {
+        gap: 8vw;
+        padding-inline: 6vw;
+    }
+
+    .arob-page .purpose-title {
+        font-size: clamp(26px, 7vw, 44px);
+        line-height: 1.5;
+        margin: 0;
+    }
+
+    .arob-page .purpose-cards {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5vw;
+        margin-bottom: 12vw;
+    }
+
+    .arob-page .purpose-cards article {
+        width: 100%;
+        height: auto;
+        padding: 7vw 6vw;
+        gap: 3vw;
+        border-radius: 4vw;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+
+        font-size: clamp(20px, 6vw, 32px);
+        line-height: 1.5;
+    }
+
+    /* no zoom on tap (it would also cause sideways overflow) */
+    .arob-page .arob-pattern-content .purpose-cards article:hover {
+        transform: none;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+    }
+
+    .arob-page .purpose-logo {
+        height: 13vw;
+        max-height: 70px;
+    }
+
+    .arob-page .purpose-cards p {
+        font-size: clamp(14px, 4.1vw, 20px);
+        line-height: 1.8;
+    }
+
+    /* the leading <br/> is only there to align cards on desktop */
+    .arob-page .purpose-cards p > br:first-child {
+        display: none;
+    }
+
+    /* =====================================================
+       TEAM SECTION  (board + team)
+       ===================================================== */
+    .arob-page .team-layout {
+        padding: 14vw 5vw 12vw;
+    }
+
+    /* decorations */
+    .arob-page .team-layout__left-shape {
+        top: 14vw;
+        width: 28vw;
+        height: calc(100% - 14vw);
+        border-radius: 0 20vw 0 0;
+    }
+
+    .arob-page .team-layout__left-shape::after {
+        top: 8vw;
+        left: 8vw;
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .arob-page .team-layout__right-pattern {
+        top: 22vw;
+        right: 3%;
+        width: 8vw;
+        height: calc(80% - 14vw);
+        background-size: 8vw 11.7vw;
+    }
+
+    /* heading */
+    .arob-page .team-layout__content > header h1 {
+        font-size: clamp(28px, 8vw, 48px);
+    }
+
+    .arob-page .team-layout__content > header p {
+        margin-top: 3vw;
+        font-size: clamp(13px, 3.8vw, 18px);
+        line-height: 1.8;
+    }
+
+    /* tabs */
+    .arob-page .team-layout__tabs {
+        margin-top: 6vw;
+    }
+
+    .arob-page .team-tab {
+        width: 36vw;
+        max-width: 200px;
+        height: 11vw;
+        max-height: 56px;
+        border-radius: 1.5vw;
+        font-size: clamp(13px, 3.8vw, 18px);
+    }
+
+    /* ---------- board: swipeable single row ---------- */
+    .arob-page .team-layout__cards {
+        gap: 4vw;
+        margin: 8vw 0 0;
+        padding: 4vw 5vw 6vw;
+
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x proximity;
+        scrollbar-width: none;
+    }
+
+    .arob-page .team-layout__cards::-webkit-scrollbar {
+        display: none;
+    }
+
+    .arob-page .team-layout__cards > * {
+        scroll-snap-align: center;
+    }
+
+    /* card size (everything scaled from the paper width) */
+    .arob-page .team-layout .team-layout__cards .team-card {
+        --paper-width: 66vw;
+        --paper-height: 66vw;
+        --info-height: 17vw;
+
+        --corner-size: 17.5vw;
+        --corner-leg: 8.3vw;
+        --corner-gap: 1vw;
+    }
+
+    .arob-page .team-layout .team-layout__cards .team-card__portrait {
+        bottom: -3.3vw;
+    }
+
+    .arob-page .team-layout .team-layout__cards .team-card__info h3 {
+        font-size: 4.6vw;
+    }
+
+    .arob-page .team-layout .team-layout__cards .team-card__info p {
+        font-size: 3.6vw;
+    }
+
+    .arob-page .team-layout .team-layout__cards .team-card:hover .team-card__corner,
+    .arob-page .team-layout .team-layout__cards .team-card:focus-visible .team-card__corner {
+        transform: translate(3.5vw, -3.5vw);
+    }
+
+    /* quote */
+    .arob-page .team-layout__quote {
+        max-width: 100%;
+        margin: 8vw auto 0;
+        padding: 5vw 3vw 0;
+        gap: 2vw;
+        border-top-width: 1px;
+    }
+
+    .arob-page .team-layout__quote span {
+        font-size: 14vw;
+    }
+
+    .arob-page .team-layout__quote p {
+        max-width: none;
+        font-size: clamp(14px, 3.9vw, 20px);
+    }
+
+    /* ---------- team: 2 cards per row, arrows underneath ---------- */
+    .arob-page .team-carousel {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "view view"
+            "prev next";
+        gap: 5vw 4vw;
+        margin: 6vw auto 0;
+    }
+
+    .arob-page .team-carousel > .team-carousel__viewport {
+        grid-area: view;
+        padding-block: 3vw;
+    }
+
+    .arob-page .team-carousel > .team-carousel__arrow:first-child {
+        grid-area: prev;
+        justify-self: end;
+    }
+
+    .arob-page .team-carousel > .team-carousel__arrow:last-child {
+        grid-area: next;
+        justify-self: start;
+    }
+
+    .arob-page .team-carousel__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6vw 3vw;
+    }
+
+    .arob-page .team-carousel__arrow {
+        width: 11vw;
+        height: 11vw;
+        max-width: 52px;
+        max-height: 52px;
+        font-size: clamp(16px, 4.5vw, 22px);
+    }
+
+    .arob-page .team-carousel__counter {
+        margin-top: 4vw;
+        font-size: clamp(13px, 3.8vw, 18px);
+    }
+
+    .arob-page .team-layout .team-carousel .team-card {
+        --paper-width: 42vw;
+        --paper-height: 42vw;
+        --info-height: 15vw;
+
+        --corner-size: 11vw;
+        --corner-leg: 5.4vw;
+        --corner-gap: 0.8vw;
+    }
+
+    .arob-page .team-layout .team-carousel .team-card__portrait {
+        bottom: -2.1vw;
+    }
+
+    .arob-page .team-layout .team-carousel .team-card__info h3 {
+        font-size: 3.7vw;
+    }
+
+    .arob-page .team-layout .team-carousel .team-card__info p {
+        font-size: 2.9vw;
+    }
+
+    .arob-page .team-layout .team-carousel .team-card:hover .team-card__corner,
+    .arob-page .team-layout .team-carousel .team-card:focus-visible .team-card__corner {
+        transform: translate(2.5vw, -2.5vw);
+    }
+
+    /* =====================================================
+       SERVICES
+       ===================================================== */
+    .arob-page .services-panel {
+        padding: 9vw 6vw;
+        box-shadow: 0 -2px 4px 1px rgba(80, 168, 89, 0.2);
+    }
+
+    .arob-page .services-panel--first {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .arob-page .services-panel:not(.services-panel--first) {
+        position: relative;
+        z-index: 2;
+    }
+
+    .arob-page .services-corner {
+        width: 40vw;
+    }
+
+    .arob-page .services-content {
+        width: 100%;
+    }
+
+    .arob-page .services-content > h2 {
+        margin-bottom: 7vw;
+        font-size: clamp(22px, 6.8vw, 40px);
+        line-height: 1.5;
+    }
+
+    .arob-page .services-grid {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 7vw;
+        column-gap: 0;
+    }
+
+    .arob-page .services-grid > .service-card:nth-child(even) {
+        padding-right: 0;
+    }
+
+    .arob-page .service-card {
+        gap: 4vw;
+    }
+
+    .arob-page .service-card--wide {
+        width: 100%;
+    }
+
+    .arob-page .service-number {
+        margin-top: 0;
+        font-size: clamp(48px, 17vw, 100px);
+        letter-spacing: -1vw;
+    }
+
+    .arob-page .service-line {
+        width: 12vw;
+        height: 2px;
+        margin-bottom: 3vw;
+    }
+
+    .arob-page .service-line--active {
+        width: 20vw;
+    }
+
+    .arob-page .service-text h3 {
+        margin: 0 0 2vw;
+        font-size: clamp(16px, 5.2vw, 26px);
+        line-height: 1.6;
+    }
+
+    /* desktop uses forced line breaks; on a phone let the text wrap by itself */
+    .arob-page .service-text p {
+        white-space: normal;
+        font-size: clamp(13px, 3.8vw, 18px);
+        line-height: 1.9;
+    }
+
+    /* =====================================================
+       CLIENTS
+       ===================================================== */
+    .arob-page .clients-section {
+        min-height: 0;
+    }
+
+    /* 3 logos visible at a time instead of 9 */
+    .arob-page .clients-logo {
+        flex: 0 0 calc(100cqw / 3);
+        width: calc(100cqw / 3);
+    }
+}
+
+@media (max-width: 1000px) {
+    html:has(.arob-page),
+    body:has(.arob-page),
+    body > div:has(.arob-page),
+    .App:has(.arob-page) {
+        overflow-x: clip !important;
+        overflow-y: visible !important;
+    }
+}
+
+
+/* ---------- stat cards (the two numbers: 10M+ / 150+) ---------- */
+.arob-page .about-stats {
+    gap: 0 3vw;
+    margin-top: 0;
+}
+
+.arob-page .stat-card {
+    width: 100%;
+    height: auto;
+    min-height: 30vw;
+    padding: 3.5vw 3vw;
+    gap: 1vw;
+    border-radius: 3vw;
+}
+
+.arob-page .stat-card-header {
+    gap: 1.5vw;
+}
+
+.arob-page .stat-card-icon {
+    width: 7vw;
+    height: 7vw;
+    max-width: 40px;
+    max-height: 40px;
+    filter: drop-shadow(0 0 1vw rgba(0, 0, 0, 0.2));
+}
+
+.arob-page .stat-card-text {
+    font-size: clamp(11px, 3.2vw, 18px);
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.arob-page .stat-card-value {
+    margin: 0;
+    font-size: clamp(34px, 11vw, 64px);
+    line-height: 1.1;
+}

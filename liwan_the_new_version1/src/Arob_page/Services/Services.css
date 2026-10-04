@@ -1,0 +1,262 @@
+/* =========================================
+   الحاوية الرئيسية
+========================================= */
+
+.services-stack {
+    position: relative;
+    isolation: isolate;
+    font-family: "Cairo", sans-serif;
+}
+
+.services-stack,
+.services-stack * {
+    box-sizing: border-box;
+}
+
+/* =========================================
+   الخلفية وحجم كل طبقة
+========================================= */
+
+.services-panel {
+    position: relative;
+    min-height: 100svh;
+
+    padding: clamp(3.3333vw, 8svh, 6.9444vw) 7%;
+
+    display: grid;
+    place-items: center;
+
+    box-shadow:
+            0 -0.2778vw 0.3472vw 0.1389vw
+            rgba(80, 168, 89, 0.2);
+
+    background-color: #132D4A;
+
+    /* الخلفية ثابتة في اللغتين */
+    background-image:
+            radial-gradient(
+                    ellipse at top left,
+                    #244B4A,
+                    transparent 45%
+            ),
+            radial-gradient(
+                    ellipse at bottom right,
+                    #244B4A,
+                    transparent 45%
+            );
+}
+
+/* الطبقة الأولى تثبت */
+.services-panel--first {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* الطبقة الثانية تمر فوق الأولى */
+.services-panel--second {
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================
+   زخارف الزوايا ثابتة في اللغتين
+========================================= */
+
+.services-corner {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 20.8333vw;
+    height: auto;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+.services-corner--opposite {
+    top: 0;
+    left: 0;
+    bottom: auto;
+    right: auto;
+
+    transform: rotate(180deg);
+}
+
+/* =========================================
+   المحتوى والعنوان
+========================================= */
+
+.services-content {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 76.3889vw);
+}
+
+.services-content > h2 {
+    margin-bottom: 6.25vw;
+    text-align: center;
+
+    font-weight: 900;
+    font-size: 4.329vw;
+
+    color: #84A3C6;
+    opacity: 0.5;
+}
+
+/* =========================================
+   توزيع الخدمات حسب اللغة
+========================================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    row-gap: 5.5556vw;
+    column-gap: 6.9444vw;
+
+    /* العربية تبدأ يمين، والإنجليزية تبدأ يسار */
+    direction: inherit;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    gap: 1.9444vw;
+    min-width: 0;
+
+    /* يعكس مكان الرقم والنص داخل البطاقة */
+    direction: inherit;
+}
+
+/* المسافة تنعكس حسب اللغة */
+.services-grid > .service-card:nth-child(even) {
+    padding-inline-start: 4.1667vw;
+}
+
+/* =========================================
+   أرقام الخدمات
+========================================= */
+
+.service-number {
+    flex-shrink: 0;
+    margin-top: 0.2083vw;
+
+    font-family: "Arial Narrow", Arial, sans-serif;
+    font-size: 8.3333vw;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.3472vw;
+
+    color: #547590;
+
+    /* يحافظ على ترتيب الرقم: 01 وليس 10 */
+    direction: ltr;
+}
+
+/* التدرج الأخضر للرقم النشط */
+.service-number--green {
+    color: #50B966;
+
+    background: linear-gradient(
+            180deg,
+            #56C56E 15%,
+            #359745 60%,
+            #173B32 100%
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* =========================================
+   نص الخدمة والخط
+========================================= */
+
+.service-text {
+    flex: 1;
+    min-width: 0;
+
+    /* يمين بالعربية، ويسار بالإنجليزية */
+    text-align: start;
+}
+
+.service-line {
+    display: block;
+    width: 4.0278vw;
+    height: 0.1389vw;
+
+    margin-bottom: 1.1111vw;
+    margin-inline-start: 0;
+    margin-inline-end: auto;
+
+    background: linear-gradient(
+            176.29deg,
+            #1C5121 30%,
+            #50A859 70%
+    );
+
+    transition: width 0.35s ease;
+}
+
+.service-line--active {
+    width: 6.9444vw;
+}
+
+.service-text h3 {
+    margin: 0 0 0.8333vw;
+
+    color: #BDCBD4;
+    font-size: 1.65vw;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.service-text p {
+    margin: 0;
+
+    color: #94A8B7;
+    font-size: 1.0417vw;
+    line-height: 1.95;
+    white-space: pre-line;
+}
+
+/* الخدمة 07: يمين بالعربية ويسار بالإنجليزية */
+.service-card--wide {
+    grid-column: 1 / -1;
+    width: 70%;
+    justify-self: start;
+}
+
+/* =========================================
+   الشاشات القصيرة
+========================================= */
+
+@media (max-height: 560px) {
+    .services-panel--first {
+        position: relative;
+        top: auto;
+    }
+}
+
+/* =========================================
+   حركة ظهور المحتوى
+========================================= */
+
+.services-reveal {
+    opacity: 0;
+    transform: translateY(1.3889vw);
+
+    transition:
+            opacity 0.7s ease,
+            transform 0.7s ease;
+}
+
+.services-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

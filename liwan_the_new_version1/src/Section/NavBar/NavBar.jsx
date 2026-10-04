@@ -1,19 +1,18 @@
 import "./NavBar.css";
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Dropdown from "../../Components/Dropdown/Dropdown.jsx";
 import Arob_colorful_logo from "../../assets/Arob_colorful_logo.png"
 
-function NavBar() {
-
+function NavBar({ variant = "liwan" }) {
     const { t, i18n } = useTranslation();
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     useEffect(() => {
-
         const handleScroll = () => {
-            setScrolled(window.scrollY > window.innerHeight);
+            setScrolled(window.scrollY > window.innerHeight / 4);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -21,13 +20,14 @@ function NavBar() {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-
     }, []);
 
     return (
-
-        <section className={`NavBar_holder ${scrolled ? "scrolled" : ""}`}>
-
+        <section
+            className={`NavBar_holder NavBar_holder--${variant} ${
+                scrolled ? "scrolled" : ""
+            }`}
+        >
             <nav
                 id="main-navigation"
                 className={`navbar ${mobileMenuOpen ? "mobile-open" : ""}`}
@@ -37,7 +37,6 @@ function NavBar() {
                     }
                 }}
             >
-
                 <a href="#contact" className="nav-link">
                     {t("nav.contact")}
                 </a>
@@ -46,47 +45,46 @@ function NavBar() {
                     {t("nav.blog")}
                 </a>
 
-                {/* Dropdown يظهر عند Hover على ليوان */}
                 <Dropdown
                     mobileMenuOpen={mobileMenuOpen}
                     title={t("nav.liwan")}
+                    titleLink="/liwan"
                     titleClassName="nav-link"
                     items={[
                         {
                             name: t("nav.discoverLiwan"),
-                            link: "#discoverLiwan"
+                            link: "/liwan#discoverLiwan"
                         },
                         {
                             name: t("nav.servicesLiwan"),
-                            link: "#services"
+                            link: "/liwan#services"
                         },
                         {
                             name: t("nav.advantagesLiwan"),
-                            link: "#advantages"
+                            link: "/liwan#advantages"
                         },
                         {
                             name: t("nav.contact"),
-                            link: "#contact"
+                            link: "/liwan#contact"
                         }
                     ]}
                 />
 
-                <a href="#services" className="nav-link">
+                <Link to="/#services" className="nav-link">
                     {t("nav.services")}
-                </a>
+                </Link>
 
-                <a href="#about" className="nav-link">
+                <Link to="/#about" className="nav-link">
                     {t("nav.about")}
-                </a>
+                </Link>
 
-                <a href="#home" className="nav-link">
+                <Link to="/" className="nav-link">
                     {t("nav.home")}
-                </a>
-
+                </Link>
             </nav>
 
             <div className={"Arob_logo_container"}>
-                <img src={Arob_colorful_logo}/>
+                <img src={Arob_colorful_logo} />
             </div>
 
             <button
@@ -97,7 +95,7 @@ function NavBar() {
                     setMobileMenuOpen(false);
                 }}
             >
-                 {i18n.language === "ar" ? "English" : "عربي"}
+                {i18n.language === "ar" ? "English" : "عربي"}
             </button>
 
             <button
@@ -112,9 +110,7 @@ function NavBar() {
                 <span />
                 <span />
             </button>
-
         </section>
-
     );
 }
 

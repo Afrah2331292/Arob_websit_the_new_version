@@ -1,0 +1,95 @@
+.team-carousel {
+    display: grid;
+    grid-template-columns: 2.7778vw minmax(0, 1fr) 2.7778vw;
+    align-items: center;
+
+    gap: 1.1111vw;
+    margin: 0.9028vw auto 0;
+
+    /* يثبت مكان سهم اليسار وسهم اليمين */
+    direction: ltr;
+}
+
+.team-carousel__viewport {
+    min-width: 0;
+    overflow: hidden;
+    padding-block: 1.3889vw;
+}
+
+.team-carousel__grid {
+    display: grid;
+
+    /* سبعة أشخاص في كل صف */
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 0.6944vw 0.3472vw;
+
+    justify-items: center;
+    align-items: start;
+    direction: rtl;
+
+    animation: team-slide-in 0.35s ease both;
+}
+
+/* حجم البطاقات داخل قسم الفريق */
+.team-layout .team-carousel .team-card {
+    --paper-width: 11.8056vw;
+    --paper-height: 11.8056vw;
+    --info-height: 3.4722vw;
+    --corner-size: 3.125vw;
+    --corner-leg: 1.5278vw;
+    --corner-gap: 0.2083vw;
+}
+
+.team-carousel__arrow {
+    display: grid;
+    place-items: center;
+
+    width: 2.7778vw;
+    height: 2.7778vw;
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #29455E;
+    color: white;
+    font-size: 1.3889vw;
+
+    cursor: pointer;
+}
+
+.team-carousel__arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.team-carousel__arrow:focus-visible {
+    outline: 0.1389vw solid #173451;
+    outline-offset: 0.2083vw;
+}
+
+.team-carousel__counter {
+    margin-top: 1.6667vw;
+
+    text-align: center;
+    color: #29455E;
+    font-size: 0.9722vw;
+}
+
+@keyframes team-slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(var(--slide-from));
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .team-carousel__grid {
+        animation: none;
+    }
+}

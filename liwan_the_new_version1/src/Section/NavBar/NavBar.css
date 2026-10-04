@@ -100,6 +100,7 @@
 .button{
     position: absolute;
     top: 20%;
+
     left: 15%;
     z-index: 9999;
     padding: 0.694vw 1.111vw;
@@ -113,11 +114,7 @@
     white-space: nowrap;
 
     background:
-            linear-gradient(
-                    69.19deg,
-                    rgba(47, 47, 47, 0.320965) 29.04%,
-                    rgba(102, 102, 102, 0) 35.74%
-            ),
+
             linear-gradient(
                     69.19deg,
                     rgba(47, 47, 47, 0.320965) 29.04%,
@@ -148,6 +145,12 @@
 }
 
 
+.NavBar_holder:not(.scrolled) .button {
+    border-right: 2px solid rgb(1,30,1,0.2);
+    border-bottom: 2px solid rgb(1,30,1,0.2);
+
+}
+
 /* Hover */
 .button:hover {
     background: rgba(255, 255, 255, 0.18);
@@ -171,3 +174,113 @@
     border: 0.5px solid #1D1D1B;
 }
 
+/* ================================
+   Navbar themes
+================================ */
+
+/* ليوان */
+.NavBar_holder--liwan {
+    --nav-background: rgba(0, 0, 0, 0.2);
+    --nav-text: #ffffff;
+
+    --nav-scrolled-background: #f8f2eb;
+    --nav-scrolled-text: #1d1d1b;
+
+    --dropdown-background: #f8f2eb;
+    --dropdown-text: #1d1d1b;
+
+    --nav-accent: #574832;
+    --nav-accent-text: #ffffff;
+}
+
+.NavBar_holder--arob {
+    --nav-background: #1d1d1b;
+    --nav-text: #ffffff;
+
+    --nav-scrolled-background: #ffffff;
+    --nav-scrolled-text: #1d1d1;
+
+    --dropdown-background: #ffffff;
+    --dropdown-text: #1E4C23;
+
+    --nav-accent: #132D4A;
+    --nav-accent-text: #ffffff;
+}
+
+/* المدونة — الألوان هنا أمثلة */
+.NavBar_holder--blog {
+    --nav-background: #f8f2eb;
+    --nav-text: #1d1d1b;
+
+    --nav-scrolled-background: #f8f2eb;
+    --nav-scrolled-text: #1d1d1b;
+
+    --dropdown-background: #ffffff;
+    --dropdown-text: #1d1d1b;
+
+    --nav-accent: #b27245;
+    --nav-accent-text: #ffffff;
+}
+
+
+/* تطبيق الألوان */
+.NavBar_holder {
+    background: var(--nav-background);
+}
+
+.NavBar_holder .navbar a,
+.NavBar_holder .dropdown-title,
+.NavBar_holder .button {
+    color: var(--nav-text);
+}
+
+.NavBar_holder.scrolled {
+    background: var(--nav-scrolled-background);
+}
+
+.NavBar_holder.scrolled .navbar a,
+.NavBar_holder.scrolled .dropdown-title,
+.NavBar_holder.scrolled .nav-link {
+    color: var(--nav-scrolled-text);
+}
+
+.NavBar_holder.scrolled .button {
+    background: var(--nav-scrolled-background);
+    color: var(--nav-scrolled-text);
+    border-color: var(--nav-scrolled-text);
+}
+
+.NavBar_holder .dropdown-menu a {
+    background: var(--dropdown-background);
+    color: var(--dropdown-text);
+}
+
+.NavBar_holder .dropdown-menu a:hover,
+.NavBar_holder.scrolled .dropdown-menu a:hover {
+    background: var(--nav-accent);
+    color: var(--nav-accent-text);
+}
+
+/* أرب: لون نص الدروب داون بعد ما يصير الناف بار أبيض */
+.NavBar_holder.NavBar_holder--arob.scrolled .dropdown-menu a {
+    background: #ffffff;
+    color: #1E4C23;
+}
+
+/* العنصر اللي عليه هوفر: خلفية زرقاء ونص أبيض */
+.NavBar_holder.NavBar_holder--arob.scrolled .dropdown-menu a:hover {
+    background: #132D4A;
+    color: #ffffff;
+}
+
+/* عناصر الناف بار وزر اللغة باللون الأزرق بعد النزول */
+.NavBar_holder.NavBar_holder--arob.scrolled .navbar > a,
+.NavBar_holder.NavBar_holder--arob.scrolled .dropdown-title,
+.NavBar_holder.NavBar_holder--arob.scrolled .button {
+    color: #132D4A;
+}
+
+/* حدود زر اللغة */
+.NavBar_holder.NavBar_holder--arob.scrolled .button {
+    border: 1px solid #132D4A;
+}

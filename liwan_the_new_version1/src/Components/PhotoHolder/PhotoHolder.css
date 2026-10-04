@@ -1,0 +1,186 @@
+.team-card {
+    --paper-width: 10.4167vw;
+    --paper-height: 10.4167vw;
+    --info-height: 2.6389vw;
+    --corner-size: 2.7778vw;
+    --corner-leg: 1.3194vw;
+    --corner-gap: 0.1389vw;
+
+    display: block;
+    position: relative;
+
+    width: calc(
+            var(--paper-width) + var(--corner-gap)
+    );
+
+    height: calc(
+            var(--paper-height) + var(--info-height) + 0.8333vw
+    );
+
+    flex: 0 0 calc(
+            var(--paper-width) + var(--corner-gap)
+    );
+
+    color: inherit;
+    text-decoration: none;
+}
+
+.team-card__surface {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: calc(
+            var(--paper-height) + var(--info-height)
+    );
+
+    filter: drop-shadow(
+            0.2778vw 0.2778vw 0.2083vw rgba(0, 0, 0, 0.30)
+    );
+}
+
+/* الزاوية الملونة */
+.team-card__corner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+
+    width: var(--corner-size);
+    height: var(--corner-size);
+
+    background: linear-gradient(
+            135deg,
+            #102B3E 5%,
+            #55AD48 70%,
+            #102B3E 100%
+    );
+
+    clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 100%,
+            52% 100%,
+            52% 48%,
+            0 48%
+    );
+
+    transition:
+            transform 0.6s cubic-bezier(0.22, 1.35, 0.35, 1);
+}
+
+/* الجزء الأبيض */
+.team-card__paper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    width: var(--paper-width);
+    height: var(--paper-height);
+    background: #fff;
+
+    clip-path: polygon(
+            0 0,
+            calc(100% - var(--corner-size)) 0,
+            calc(100% - var(--corner-size))
+            calc(var(--corner-leg) + var(--corner-gap)),
+            calc(100% - var(--corner-leg))
+            calc(var(--corner-leg) + var(--corner-gap)),
+            calc(100% - var(--corner-leg))
+            calc(var(--corner-size) + var(--corner-gap)),
+            100% calc(var(--corner-size) + var(--corner-gap)),
+            100% 100%,
+            0 100%
+    );
+}
+
+/* مساحة صورة الموظف */
+.team-card__portrait-area {
+    position: absolute;
+    inset: 0 var(--corner-gap) var(--info-height) 0;
+    z-index: 2;
+
+    clip-path: inset(-6.9444vw 0 0 0);
+}
+
+.team-card__portrait {
+    position: absolute;
+    margin-bottom: -0.5556vw;
+    left: 50%;
+
+    width: 100%;
+    height: auto;
+
+    display: block;
+    transform: translateX(-50%) scale(1);
+    transform-origin: center bottom;
+
+    transition: transform 0.4s ease;
+}
+
+/* شريط الاسم والمنصب */
+.team-card__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.1389vw;
+    width: var(--paper-width);
+    height: var(--info-height);
+
+    background: linear-gradient(
+            115deg,
+            #4B6178,
+            #0B2543 75%
+    );
+
+    box-shadow:
+            0 0.2083vw 0.3472vw rgba(0, 0, 0, 0.22);
+
+    text-align: center;
+}
+
+.team-card__info h3 {
+    margin: 0;
+
+    color: #fff;
+    font-family: "Cairo", sans-serif;
+    font-size: 0.7639vw;
+    line-height: 1.4;
+}
+
+.team-card__info p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.65);
+    font-family: "Cairo", sans-serif;
+    font-size: 0.625vw;
+    line-height: 1.4;
+}
+
+/* حركة الزاوية */
+.team-card:hover .team-card__corner,
+.team-card:focus-visible .team-card__corner {
+    transform: translate(0.625vw, -0.625vw);
+}
+
+/* تكبير الصورة */
+.team-card:hover .team-card__portrait,
+.team-card:focus-visible .team-card__portrait {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.team-card:focus-visible {
+    outline: 0.2083vw solid #68B545;
+    outline-offset: 0.3472vw;
+}

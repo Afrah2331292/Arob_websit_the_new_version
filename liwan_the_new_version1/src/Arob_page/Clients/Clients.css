@@ -1,0 +1,129 @@
+.clients-section,
+.clients-section * {
+    box-sizing: border-box;
+}
+
+.clients-section {
+    padding:
+            clamp(2rem, 3.82vw, 3.4375rem)
+            clamp(1rem, 1.67vw, 1.5rem)
+            clamp(3rem, 4.86vw, 4.375rem);
+
+    min-height: clamp(34rem, 48.61vw, 43.75rem);
+
+    background: #ffffff;
+    font-family: "Cairo", sans-serif;
+}
+
+/* عنوان القسم */
+.clients-heading {
+    margin-bottom: clamp(2rem, 3.125vw, 2.8125rem);
+    text-align: center;
+}
+
+.clients-heading h2 {
+    margin: 0;
+    color: #132d4a;
+
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 800;
+}
+
+.clients-heading > span {
+    display: block;
+
+    width: clamp(2.5rem, 3.47vw, 3.125rem);
+    height: 0.125rem;
+
+    margin: clamp(0.5rem, 0.83vw, 0.75rem) auto 0;
+    background: #50a859;
+}
+
+/* المسافة بين الصفين */
+.clients-rows {
+    display: grid;
+    gap: clamp(2rem, 3.82vw, 3.4375rem);
+
+    width: min(100%, 96.875rem);
+    margin-inline: auto;
+}
+
+/* الجزء الظاهر من كل شريط */
+.clients-marquee {
+    width: 100%;
+    overflow: hidden;
+    direction: ltr;
+
+    container-type: inline-size;
+}
+
+/* الشريط المتحرك */
+.clients-track {
+    display: flex;
+    width: max-content;
+
+    animation: clients-scroll var(--duration, 25s) linear infinite;
+    will-change: transform;
+}
+
+/* الصف الأول يتحرك لليمين */
+.clients-track--right {
+    animation-direction: reverse;
+}
+
+/* مجموعة الشعارات */
+.clients-group {
+    display: flex;
+    flex-shrink: 0;
+}
+
+/* كل خانة تأخذ تسع عرض الشريط */
+.clients-logo {
+    flex: 0 0 calc(100cqw / 9);
+    width: calc(100cqw / 9);
+
+    height: clamp(5rem, 7.64vw, 6.875rem);
+
+    padding:
+            clamp(0.5rem, 0.83vw, 0.75rem)
+            clamp(0.25rem, 1cqw, 0.875rem);
+
+    display: grid;
+    place-items: center;
+}
+
+.clients-logo img {
+    display: block;
+    width: 100%;
+    height: clamp(3.5rem, 5.28vw, 4.75rem);
+
+    object-fit: contain;
+    user-select: none;
+}
+
+/* انتقال بمقدار مجموعة كاملة */
+@keyframes clients-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* احترام إعداد تقليل الحركة */
+@media (prefers-reduced-motion: reduce) {
+    .clients-track {
+        animation: none;
+        will-change: auto;
+    }
+
+    .clients-marquee {
+        overflow-x: auto;
+    }
+
+    .clients-group[aria-hidden="true"] {
+        display: none;
+    }
+}

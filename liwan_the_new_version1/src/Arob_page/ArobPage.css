@@ -1,0 +1,125 @@
+/* القسم الذي يحدد مدة ثبات الزخرفة */
+.arob-pattern-content {
+    position: relative;
+    display: grid;
+    isolation: isolate;
+    background: transparent;
+}
+
+/* وضع الزخرفة والأقسام فوق بعض */
+.arob-pattern-background,
+.arob-pattern-sections {
+    grid-area: 1 / 1;
+    min-width: 0;
+}
+
+.arob-pattern-background {
+    position: sticky;
+    top: 0;
+    align-self: start;
+
+    height: 100svh;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.arob-pattern-sections {
+    position: relative;
+    z-index: 2;
+}
+
+/* خلفيات القسمين لا تحجب الزخرفة أو التدرّج */
+.arob-pattern-content .arob-about-section,
+.arob-pattern-content .purpose-section {
+    background: transparent;
+}
+
+/* المحتوى والبطاقات فوق خطوط الزخرفة */
+.arob-pattern-sections .about-container,
+.arob-pattern-sections .purpose-title,
+.arob-pattern-sections .purpose-cards {
+    position: relative;
+    z-index: 2;
+}
+
+/* القسم الذي يأتي بعد انتهاء الزخرفة */
+.arob-next-section {
+    position: relative;
+    background: transparent;
+}
+
+.arob-next-section .arob-about-section {
+    background: transparent;
+}
+
+/* صف الزخرفة */
+.arob-pattern-row {
+    position: absolute;
+    display: flex;
+
+    gap: 8vw;
+    width: max-content;
+
+    left: -15vw;
+    top: 35%;
+
+    opacity: 0.30;
+    color: #67B745;
+    transform: rotate(-16deg);
+}
+
+/* وحدة الزخرفة */
+.arob-pattern-unit {
+    position: relative;
+    display: block;
+
+    width: 18vw;
+    aspect-ratio: 1;
+
+    border-top: 0.2778vw solid currentColor;
+    border-right: 0.2778vw solid currentColor;
+}
+
+.arob-pattern-unit:nth-child(even) {
+    color: #67B745;
+}
+
+.arob-pattern-unit::before,
+.arob-pattern-unit::after {
+    content: "";
+    position: absolute;
+
+    width: 49%;
+    height: 49%;
+
+    border-left: 0.2778vw solid currentColor;
+    border-bottom: 0.2778vw solid currentColor;
+}
+
+.arob-pattern-unit::before {
+    top: 0;
+    left: 0;
+}
+
+.arob-pattern-unit::after {
+    bottom: 0;
+    right: 0;
+}
+
+/* تلاشي آخر وحدة */
+.arob-pattern-unit:last-child {
+    -webkit-mask-image: linear-gradient(
+            to right,
+            #000 0%,
+            #000 50%,
+            transparent 100%
+    );
+
+    mask-image: linear-gradient(
+            to right,
+            #000 0%,
+            #000 50%,
+            transparent 100%
+    );
+}

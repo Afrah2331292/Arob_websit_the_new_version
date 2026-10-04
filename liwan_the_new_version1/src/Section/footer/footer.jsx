@@ -10,12 +10,12 @@ import youtube from "../../assets/youtube.png"
 import Arob_logo_White from "../../assets/Aroblogo_white.png"
 import MapSection from "../../Components/Map/MapSection.jsx"
 import location_icon_buttom from "../../assets/location_orange.png"
+import location_green from "../../assets/location_green.png";
 
-function Footer() {
+function Footer({ variant = "liwan" }) {
     const { t } = useTranslation();
     return (
-        <section className="Footer_container">
-            <div className={"Upper_section"}>
+        <section className={`Footer_container Footer_container--${variant}`}>            <div className={"Upper_section"}>
                 <div className={"contact_section"}>
 
                     <div className="contact_us">
@@ -167,7 +167,13 @@ function Footer() {
                     </div>
                     <div className={"location_title_container"}>
                         <div className={"location_icon_holder"}>
-                            <img className={"location_icon_buttom"} src={location_icon_buttom}/>
+
+                            <img
+                                className="location_icon_buttom"
+                                src={variant === "arob" ? location_green : location_icon_buttom}
+                                alt="الموقع"
+                            />
+
                         </div>
 
                         <div className={"location_title_description"}>

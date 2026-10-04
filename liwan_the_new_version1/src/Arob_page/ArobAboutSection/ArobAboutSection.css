@@ -1,0 +1,336 @@
+/* =========================================
+   قسم عن أرب
+   المقاسات محسوبة على عرض 1440px
+========================================= */
+
+.arob-about-section {
+    position: relative;
+    width: 100%;
+    height: 48.6111vw;
+
+    display: grid;
+    place-items: center;
+
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.about-container {
+    width: 80.2778vw;
+    height: 33.5431vw;
+    margin-inline: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2vw;
+
+    direction: rtl;
+    text-align: right;
+}
+
+.about-content h2 {
+    margin: 0;
+
+    font-family: "Cairo";
+    font-size: 3.0vw;
+    line-height: 1;
+
+    color: #132D4A;
+}
+
+.about-question-mark {
+    display: inline-block;
+    margin: 0;
+
+    font-family: "Cairo";
+    font-size: 5.2083vw;
+    font-weight: 800;
+    line-height: 1;
+
+    text-align: right;
+    color: rgba(104, 181, 69, 0.9);
+
+    transform: rotate(0deg);
+    transform-origin: center;
+    transition: transform 0.4s ease;
+}
+
+.about-label {
+    font-family: "Cairo";
+    font-size: 1.3889vw;
+    color: rgba(104, 181, 69, 0.9);
+}
+
+.about-description {
+    margin: -0.5556vw 0 0;
+
+    font-family: "GE Snd Book";
+    font-size: 1.875vw;
+    font-weight: 400;
+    line-height: 1.35;
+
+    text-align: right;
+    color: rgba(0, 0, 0, 0.85);
+    opacity: 0.9;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 3vw;
+
+    direction: rtl;
+    margin-top: -2vw;
+}
+
+/* =========================================
+   الصورة والزخرفة
+========================================= */
+
+.about-media {
+    position: relative;
+    width: min(100%, 25.2083vw);
+    justify-self: end;
+}
+
+.about-decoration {
+    position: absolute;
+    top: -6.25vw;
+    right: -7.9861vw;
+    z-index: 0;
+
+    width: 19.4444vw;
+    height: auto;
+
+    pointer-events: none;
+}
+
+.about-photo {
+    position: relative;
+    z-index: 1;
+
+    width: 95%;
+    overflow: hidden;
+    border-radius: 1.1806vw;
+    isolation: isolate;
+}
+
+.about-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.about-photo::after,
+.about-photo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    pointer-events: none;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* التدرج الأساسي */
+.about-photo::after {
+    background: linear-gradient(
+            to bottom,
+            transparent 55%,
+            rgba(19, 45, 74, 0.55) 78%,
+            #132D4A 100%
+    );
+
+    opacity: 1;
+}
+
+/* التدرج عند الهوفر */
+.about-photo::before {
+    background: linear-gradient(
+            to bottom,
+            transparent 55%,
+            rgba(19, 45, 74, 0.7) 73%,
+            #132D4A 100%
+    );
+
+    opacity: 0;
+}
+
+.about-photo:hover::before {
+    opacity: 1;
+}
+
+.about-container:has(.about-photo:hover) .about-question-mark {
+    transform: rotate(-15deg);
+}
+
+/* =========================================
+   حركة الظهور
+========================================= */
+
+.reveal-up {
+    opacity: 0;
+    transform: translateY(1.7361vw);
+
+    transition:
+            opacity 0.7s ease,
+            transform 0.7s ease;
+}
+
+.reveal-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* حركة النص والصورة في قسم عن أرب */
+.arob-about-section .reveal-up {
+    transform: translateY(2.7778vw);
+
+    transition:
+            opacity 0.8s ease,
+            transform 0.8s ease;
+}
+
+.arob-about-section .reveal-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   الرسالة والرؤية والقيم
+========================================= */
+
+.purpose-section {
+    display: flex;
+    flex-direction: column;
+    gap: 3.4722vw;
+}
+
+.purpose-title {
+    font-family: "Cairo";
+    font-size: 2.5vw;
+    font-weight: 700;
+    line-height: 5.6944vw;
+
+    text-align: center;
+    color: #132D4A;
+}
+
+.purpose-cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.6667vw;
+    margin-bottom: 3.4722vw;
+}
+
+/* التنسيق المشترك للبطاقات */
+.purpose-cards article {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    width: 25.5375vw;
+    height: 32.8799vw;
+    padding: 1.6667vw;
+    gap: 1.1111vw;
+
+    border-radius: 0.9577vw;
+    background-color: #E1F0DA;
+    box-shadow: 0 0 0.3831vw rgba(0, 0, 0, 0.25);
+
+    font-family: "GE Snd Book";
+    font-size: 2.5538vw;
+    font-weight: 400;
+    line-height: 3.9583vw;
+
+    text-align: center;
+    color: #132D4A;
+
+    transition:
+            background-color 0.3s ease,
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+}
+
+/* اللون الأساسي للبطاقة الزرقاء */
+.purpose-cards article.purpose-card-vision-card,
+.arob-pattern-content .purpose-cards article.purpose-card-vision-card {
+    background-color: #C4CBD2;
+}
+
+/* الهوفر للبطاقات الخضراء */
+.purpose-cards article:hover,
+.arob-pattern-content .purpose-cards article:hover {
+    background-color: #A4D38F;
+    transform: scale(1.03);
+
+    box-shadow:
+            0 0.4861vw 1.25vw 0.2778vw rgba(0, 0, 0, 0.10);
+}
+
+/* الهوفر للبطاقة الزرقاء */
+.purpose-cards article.purpose-card-vision-card:hover,
+.arob-pattern-content .purpose-cards article.purpose-card-vision-card:hover {
+    background-color: #A1ABB7;
+}
+
+/* نصوص البطاقات */
+.purpose-cards article h3,
+.purpose-cards article p {
+    margin: 0;
+}
+
+.purpose-logo {
+    display: block;
+    width: auto;
+    height: 3.4722vw;
+    margin-inline: auto;
+}
+
+.purpose-cards p {
+    font-family: "GE Snd Book";
+    font-size: 1.6599vw;
+    line-height: 2.5694vw;
+
+    text-align: center;
+    color: rgba(19, 45, 74, 0.65);
+}
+
+/* =========================================
+   البطاقات فوق الزخرفة
+========================================= */
+
+.arob-pattern-content .purpose-section {
+    opacity: 1;
+}
+
+.arob-pattern-content .purpose-cards {
+    position: relative;
+    z-index: 3;
+}
+
+.arob-pattern-content .purpose-cards article {
+    opacity: 1;
+}
+
+.about-stats > :nth-child(2) {
+    position: relative;
+    left: 5.5vw;
+}
+
+/* النص الإنجليزي بمحاذاة اليسار داخل نفس موقع المحتوى */
+.arob-about-section .about-content[dir="ltr"] {
+    direction: ltr;
+    text-align: left;
+}
+
+.arob-about-section .about-content[dir="ltr"] h2,
+.arob-about-section .about-content[dir="ltr"] .about-description {
+    direction: ltr;
+    text-align: left;
+}
