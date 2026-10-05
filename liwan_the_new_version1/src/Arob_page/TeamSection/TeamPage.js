@@ -5,8 +5,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-1.png",
             import.meta.url
         ).href,
-        name: "أ. هاشم الشاوي",
-        jobTitle: "مستشار مالية واستثمار وحوكمة بخبرة اكثر من 18 سنه",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
     {
@@ -15,9 +15,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-2.png",
             import.meta.url
         ).href,
-        name: "أ. محمد الماضي",
-        jobTitle: "مستشار حوكمة وتطوير اعمال\n" +
-            " بخبرة اكثر من 12 سنه",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -27,8 +26,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-3.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
     {
@@ -37,8 +36,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-4.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
     {
@@ -47,8 +46,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-5.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -58,8 +57,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-6.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
     {
@@ -68,8 +67,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-7.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -79,8 +78,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-8.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -90,8 +89,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-9.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -101,8 +100,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-10.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -112,8 +111,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-11.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -123,8 +122,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-12.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -134,8 +133,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-13.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -145,8 +144,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-14.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -156,8 +155,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-15.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -167,8 +166,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-16.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -178,8 +177,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-17.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -189,8 +188,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-18.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
     {
@@ -199,8 +198,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-19.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -210,8 +209,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-20.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -221,8 +220,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-21.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -232,8 +231,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-22.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle:"",
         linkedinUrl: "",
     },
 
@@ -243,8 +242,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-23.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -254,8 +253,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-24.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -265,8 +264,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-25.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -276,8 +275,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-26.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -287,8 +286,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-27.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
@@ -298,8 +297,8 @@ export const teamMembers = [
             "./TeamImages/team/Num-28.png",
             import.meta.url
         ).href,
-        name: "م. أنمار السليماني",
-        jobTitle: "المؤسس | رئيس مجلس الإدارة",
+        name: "",
+        jobTitle: "",
         linkedinUrl: "",
     },
 
